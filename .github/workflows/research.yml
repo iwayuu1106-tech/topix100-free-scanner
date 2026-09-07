@@ -7,6 +7,7 @@ on:
     paths:
       - "research_backtest_v2.py"
       - "research_holdout.py"
+      - "validate_v2_hypothesis.py"
       - "universe.json"
       - "requirements.txt"
       - ".github/workflows/research.yml"
@@ -27,6 +28,7 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python research_backtest_v2.py
       - run: python research_holdout.py
+      - run: python validate_v2_hypothesis.py
       - name: Commit research outputs
         run: |
           git config user.name "topix100-bot"
