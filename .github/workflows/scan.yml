@@ -3,7 +3,8 @@ name: Free TOPIX100 Scan
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 10 * * 1-5"
+    # 09:00 UTC = 18:00 JST, Monday-Friday
+    - cron: "0 9 * * 1-5"
   push:
     branches: [main]
     paths:
