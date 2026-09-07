@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - "research_backtest_v2.py"
+      - "research_holdout.py"
       - "universe.json"
       - "requirements.txt"
       - ".github/workflows/research.yml"
@@ -25,6 +26,7 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - run: python research_backtest_v2.py
+      - run: python research_holdout.py
       - name: Commit research outputs
         run: |
           git config user.name "topix100-bot"
