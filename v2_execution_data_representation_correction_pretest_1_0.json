@@ -1,0 +1,39 @@
+{
+  "artifact": "v2実売買実行仕様 PRETEST 1.0 データ表現実装修正",
+  "status": "FROZEN_BEFORE_CORRECTED_RERUN",
+  "parent_execution_spec_file": "v2_execution_spec_pretest_1_0.json",
+  "parent_execution_spec_sha256": "27891cb9d0f43ae59266a83c263d96cc17c2a95e624ce4b4400d0e9948a4dd83",
+  "data_quality_addendum_file": "v2_execution_data_quality_addendum_pretest_1_0.json",
+  "data_quality_addendum_sha256": "a1c8e2bbf515e7625474f9eb66757f64126f168ec721cb7ce6348e2742bc873e",
+  "v1_2_sha256": "c2aef8f85dfdf125285623b7b6556b78a43509124ee09985b047b365f929d3a6",
+  "v1_2_modified": false,
+  "strategy_rules_modified": false,
+  "reason": "固定仕様A02は実際の当時株価単位のRAW OHLCで執行する前提だが、Yahoo/yfinanceのOHLCは株式分割を過去へ遡及反映した価格系列を返す。旧実装はその系列にA12の分割株数変更を重ね、分割を二重計上した。これは売買ルール変更ではなく、固定済みA02/A12を同一株式単位で実装するためのデータ表現修正。",
+  "forbidden_use": "この修正では候補条件、閾値、買い/売り条件、資金、100株単位、同日優先順位、勝者判定式を一切変更しない。既に見えた損益を改善する目的の変更は禁止。",
+  "raw_ohlc_reconstruction": {
+    "input": "yfinance auto_adjust=False の Open/High/Low/Close と Stock Splits",
+    "future_split_factor_definition": "各日dについて、dより後に発効するStock Splits比率の積。d当日の分割比率は含めない。",
+    "formula": "HistoricalRawOHLC[d] = YahooOHLC[d] * product(StockSplits[t] for t>d where ratio>0)",
+    "columns": [
+      "Open",
+      "High",
+      "Low",
+      "Close"
+    ],
+    "volume": "変更しない。PRETEST 1.0の執行・候補判定・資金計算でVolumeは使わない。",
+    "stock_splits": "変更しない。A12に従い発効日に保有株数×ratio、ストップ/当日買いトリガー÷ratio。",
+    "sma75": "raw復元後のCloseへ既存split_only_sma75を適用し、各判断日時点の株式単位へ過去75日を正規化する。",
+    "ohlc_repair_order": "既存データ品質アドオンのOHLC包絡修復をYahoo入力系列へ適用した後、4価格列を同一future_split_factorでRAW復元する。正の係数乗算なので包絡関係は維持される。"
+  },
+  "audit_requirements": [
+    "各銘柄の非1分割イベントを保存する",
+    "RAW復元対象行数と最大future_split_factorを保存する",
+    "分割イベント前後で価格単位変換がA12と整合することを機械監査する",
+    "旧二重計上結果はINVALID_IMPLEMENTATIONとして最終レポートの比較対象から除外する"
+  ],
+  "anti_hindsight": {
+    "status": "The original execution/strategy specification was frozen before any realized backtest. This correction is frozen after detecting an implementation/data-unit defect and before the corrected rerun.",
+    "interpretation": "Corrected rerun is a faithful implementation check of the already-frozen rules, not a new optimized strategy test.",
+    "future_strategy_changes": "Any strategy-rule change requires a new pre-registered version and new OOS/forward evaluation."
+  }
+}
