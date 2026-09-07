@@ -1,0 +1,125 @@
+{
+  "artifact": "v2実売買実行仕様 PRETEST 1.0",
+  "status": "PRETEST_SPEC_TO_FREEZE_BEFORE_REALIZED_BACKTEST",
+  "purpose": "v1.2を一切変更せず、既存v2候補選定を日足データ上で完全に決定論的な実売買バックテストへ接続するための別仕様。",
+  "lineage": {
+    "frozen_v1_2_sha256": "c2aef8f85dfdf125285623b7b6556b78a43509124ee09985b047b365f929d3a6",
+    "v1_2_unchanged": true,
+    "source_book_file": "名称未設定(3).pdf",
+    "separation_rule": "この仕様で追加する機械化仮定はv1.2や本の原ルールとは別物。v2独自実行仮定としてのみ扱う。"
+  },
+  "source_derived_rules_preserved": {
+    "candidate_side": "既に固定したv2土台イベントを候補選定に使う。",
+    "buy_stop": "候補日Tの終了時点で計算した75日SMAより1呼値上へ、翌営業日T+1に逆指値買い。",
+    "order_validity": "買い注文は翌営業日1日限り。未約定ならそのイベント由来の注文は失効。",
+    "initial_stop": "買い約定日の終了後に当日75日SMAを再計算し、その1呼値下へ初期ロスカットを置く。",
+    "wave_sizing_source": "本/v1.2には上昇1回目10-20%、2回目40-50%、3回目30-40%があるが、波境界が完全機械化されていないためPRETEST 1.0の数量決定には使わない。",
+    "no_fixed_profit_target_claim": "固定利確率は本/v1.2の既存ルールとして導入しない。"
+  },
+  "v2_execution_assumptions": {
+    "A01_event_scope": "research/expectancy_foundation_enriched.csv に既に保存済みのv2土台イベントを固定入力とする。実現損益を見た後でイベント定義を変更しない。",
+    "A02_execution_price_and_indicator": "注文・約定・ストップ判定はyfinance auto_adjust=FalseのRAW OHLCを使用。実行用SMA75は、各判断日までに発効済みのStock Splitsだけを過去終値へ遡及反映して現行株式単位へ正規化し、配当調整はしない。",
+    "A03_buy_gap_fill": "翌営業日始値Openが買い逆指値以上ならOpenで約定。Openが逆指値未満かつHighが逆指値以上なら逆指値価格で約定。それ以外は未約定失効。",
+    "A04_sell_stop_gap_fill": "有効ロスカットについて、Openがストップ以下ならOpenで売却。Openがストップより上かつLowがストップ以下ならストップ価格で売却。",
+    "A05_position_size": "新規エントリーは常に100株1単元。ナンピン・買い増し・ピラミッディングなし。",
+    "A06_capital": "初期資金300000円。現金取引のみ。信用・レバレッジ・空売りなし。同一銘柄は同時に1ポジションまで。複数銘柄保有は現金残高の範囲で可。",
+    "A07_same_day_priority": "各営業日の処理順は①前日までに確定した翌朝成行売却、②既存ポジションの寄付きギャップストップ、③新規買い注文の資金予約を銘柄コード昇順、④既存ポジションの日中ストップ、⑤予約済み新規買いの約定判定、⑥引け後の指標・翌日売却判定。日中売却代金は同日の新規買い資金へ再利用しない。",
+    "A08_entry_day_stop_activation": "新規約定日のロスカット価格は当日引け後に計算するため、翌営業日から有効。",
+    "A09_exit_integration": "PRETEST 1.0の決定論的売却は『有効な初期ロスカット』と『引け終値が実行用SMA75を下回ったら翌営業日寄付きで全株売却』の2本だけ。MACD・BB・ローソク足・高値再挑戦による裁量利確はPRETEST 1.0には入れない。これはv2独自実行仮定であり本の万能売却式とは主張しない。",
+    "A10_scheduled_exit_fill": "前日引け後に75MA割れによる売却が確定した場合、翌営業日Openで全株売却する。予定売却がある日はストップより予定売却を優先する。",
+    "A11_reentry": "損切り・トレンド売却後の再エントリーは、後日あらためて固定v2土台の新規イベントが発生した場合だけ許可。同一イベントの注文持越し・即再注文はしない。",
+    "A12_corporate_actions": "保有中に株式分割/併合が当日発効した場合、寄付き前に保有株数をsplit ratio倍、既存ストップをsplit ratioで除算。発効日前に作成され当日執行予定の買いトリガーも同率で除算。",
+    "A13_costs_and_distributions": "売買手数料・税金・スリッページ・配当金は含めない。ギャップ約定はA03/A04のOpenルールで反映する。したがって結果は税・手数料前の価格売買バックテスト。",
+    "A14_end_of_period": "期間末に戦略上の強制決済はしない。保有中ポジションは最終終値で時価評価し、最終資産・ドローダウンへ含める。closed-trade指標は実際に決済済みの取引だけで算出する。"
+  },
+  "tick_table_jpy": [
+    {
+      "max_price": 1000,
+      "tick": 0.1
+    },
+    {
+      "max_price": 3000,
+      "tick": 0.5
+    },
+    {
+      "max_price": 10000,
+      "tick": 1.0
+    },
+    {
+      "max_price": 30000,
+      "tick": 5.0
+    },
+    {
+      "max_price": 100000,
+      "tick": 10.0
+    },
+    {
+      "max_price": 300000,
+      "tick": 50.0
+    },
+    {
+      "max_price": 1000000,
+      "tick": 100.0
+    },
+    {
+      "max_price": 3000000,
+      "tick": 500.0
+    },
+    {
+      "max_price": 10000000,
+      "tick": 1000.0
+    },
+    {
+      "max_price": 30000000,
+      "tick": 5000.0
+    },
+    {
+      "max_price": null,
+      "tick": 10000.0
+    }
+  ],
+  "strategies_frozen_before_test": {
+    "S1_V2_FOUNDATION": "v2土台のみ",
+    "S2_V2_PLUS_SMA75_SLOPE_GE_0_75PCT": "v2土台 + 75MAの5営業日上昇率>=0.75%",
+    "S3_V2_PLUS_RS20_GE_3PCT": "v2土台 + TOPIX比20日相対強度>=3%",
+    "S4_V2_PLUS_BOTH": "S2とS3を両方満たす"
+  },
+  "phase_rules": {
+    "discovery_signal_end": "2024-07-08",
+    "discovery_mark_end": "2024-09-06",
+    "validation_signal_start": "2024-09-09",
+    "all": "既存v2土台イベントの利用可能な全期間",
+    "note": "discoveryでは2024-07-08以降に新規シグナルを追加せず、既存保有だけ2024-09-06まで追跡。validationは2024-09-09以降の新規イベントだけで独立して300000円から開始。"
+  },
+  "metrics": [
+    "candidate_event_count",
+    "filled_entry_count",
+    "closed_trade_count",
+    "win_rate",
+    "mean_pnl_per_trade_jpy",
+    "mean_trade_return",
+    "avg_gain_return",
+    "avg_loss_return",
+    "payoff_ratio",
+    "max_drawdown",
+    "total_return",
+    "annualized_return",
+    "ending_equity_jpy",
+    "average_capital_utilization",
+    "unfilled_expired_count",
+    "skipped_insufficient_cash_count",
+    "skipped_already_holding_count",
+    "open_positions_end"
+  ],
+  "winner_rules_frozen_before_test": {
+    "minimum_closed_trades_each_phase": 30,
+    "eligibility": "勝者判定にはdiscoveryとvalidationの両方でclosed_trade_count>=30が必要。未満は参考値として表示しても勝者にしない。",
+    "highest_expectancy": "eligibleかつdiscovery/validationのmean_trade_returnが両方>0の戦略のうち、validation mean_trade_return最大。",
+    "most_stable": "eligibleかつ両期間mean_trade_return>0の戦略のうち、|discovery mean_trade_return - validation mean_trade_return|最小。同値ならvalidation max_drawdownの絶対値が小さい方。",
+    "lowest_risk": "eligibleかつvalidation mean_trade_return>0の戦略のうち、validation max_drawdownの絶対値が最小。"
+  },
+  "anti_hindsight": {
+    "rule": "この実行仕様と4戦略・勝者判定式をGitHubへ保存しSHA256固定した後にのみ、新規の実現売買バックテストを実行する。",
+    "post_test_change": "結果を見た後の変更はPRETEST 1.0の上書きではなく、別バージョンとして再度事前固定してから新しいOOS/forward testへ進む。"
+  }
+}
