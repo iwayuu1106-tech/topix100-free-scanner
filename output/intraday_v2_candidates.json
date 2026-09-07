@@ -1,0 +1,59 @@
+{
+  "status": "PASS_INTRADAY_SNAPSHOT",
+  "warning": "INTRADAY PROVISIONAL: current-day daily bar is incomplete and can change before the 15:30 close. This is not the official close-confirmed strategy signal.",
+  "snapshot_generated_jst": "2026-09-07T14:27:09.498596+09:00",
+  "universe_count": 99,
+  "rows_ok": 99,
+  "gap_count": 0,
+  "gaps": [],
+  "latest_dates": [
+    "2026-09-07"
+  ],
+  "v2_foundation_candidate_count": 2,
+  "v2_foundation_candidates": [
+    {
+      "code": "5803",
+      "asof": "2026-09-07",
+      "snapshot_generated_jst": "2026-09-07T14:27:09.498596+09:00",
+      "open": 5300.0,
+      "high": 5362.0,
+      "low": 5175.0,
+      "close": 5232.0,
+      "adj_close": 5232.0,
+      "volume": 27056700,
+      "sma25": 5283.48,
+      "sma75": 5066.586666666667,
+      "sma75_5": 5057.7733333333335,
+      "prev_adj_close": 5053.0,
+      "fresh_75_cross_up": true,
+      "sma75_rising_5d": true,
+      "sma25_above_sma75": true,
+      "price_le_sma25": true,
+      "v2_foundation": true,
+      "lot_cost_100_shares_jpy": 523200.0,
+      "affordable_with_300k": false
+    },
+    {
+      "code": "6752",
+      "asof": "2026-09-07",
+      "snapshot_generated_jst": "2026-09-07T14:27:09.498596+09:00",
+      "open": 4233.0,
+      "high": 4410.0,
+      "low": 4231.0,
+      "close": 4405.0,
+      "adj_close": 4405.0,
+      "volume": 4935400,
+      "sma25": 4410.6,
+      "sma75": 4179.88,
+      "sma75_5": 4114.573333333334,
+      "prev_adj_close": 4163.0,
+      "fresh_75_cross_up": true,
+      "sma75_rising_5d": true,
+      "sma25_above_sma75": true,
+      "price_le_sma25": true,
+      "v2_foundation": true,
+      "lot_cost_100_shares_jpy": 440500.0,
+      "affordable_with_300k": false
+    }
+  ]
+}
