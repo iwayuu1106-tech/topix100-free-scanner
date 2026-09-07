@@ -13,6 +13,7 @@ on:
       - "sanitize_expectancy_json.py"
       - "research_execution_expectancy_v1_2.py"
       - "research_v2_realized_backtest_pretest_1_0.py"
+      - "research_v2_realized_backtest_pretest_1_0_run.py"
       - "v2_execution_spec_pretest_1_0.json"
       - "v2_execution_spec_pretest_1_0_manifest.json"
       - "universe.json"
@@ -39,7 +40,7 @@ jobs:
       - run: python research_expectancy_filters.py
       - run: python sanitize_expectancy_json.py
       - run: python research_execution_expectancy_v1_2.py
-      - run: python research_v2_realized_backtest_pretest_1_0.py
+      - run: python research_v2_realized_backtest_pretest_1_0_run.py
       - name: Commit research outputs
         run: |
           git config user.name "topix100-bot"
