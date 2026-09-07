@@ -1,0 +1,14 @@
+{
+  "status": "PASS_DATA_LAYER",
+  "asof": "2026-09-07",
+  "checks": {
+    "01_same_free_source_all_names": true,
+    "02_all_names_have_120_rows": true,
+    "03_latest_date_matches_all_names": true,
+    "04_ohlcv_sanity": true,
+    "05_sma25_sma75_macd_bb": true,
+    "06_candidate_packet": true,
+    "07_no_silent_fallback": true
+  },
+  "next_step": "Feed candidate_packet.json to the frozen v1.2 AI review for fundamentals/news, Pattern A/B, wave count, final status, 300k sizing, and order card."
+}
