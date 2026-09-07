@@ -4,6 +4,13 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "15 10 * * 1-5"
+  push:
+    branches: [main]
+    paths:
+      - "scanner.py"
+      - "universe.json"
+      - "requirements.txt"
+      - ".github/workflows/scan.yml"
 
 permissions:
   contents: write
