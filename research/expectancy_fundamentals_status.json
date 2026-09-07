@@ -1,0 +1,6 @@
+{
+  "status": "NOT_EXECUTED_NO_POINT_IN_TIME_SOURCE",
+  "requested_feature": "historical revenue growth + operating-income growth known as of each event date",
+  "reason": "The free runner currently has no verified point-in-time historical fundamentals feed with disclosure timestamps. Using today's Yahoo/yfinance financial-statement snapshot for past events could leak later revisions/future knowledge, so this factor is deliberately not scored.",
+  "requirement_to_enable": "Add a historical fundamentals source that preserves report/disclosure dates and values as known at that time; then predeclare growth bins before rerunning."
+}

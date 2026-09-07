@@ -1,0 +1,153 @@
+{
+  "status": "PASS",
+  "purpose": "Raise expected value without changing the frozen v2 foundation or v1.2 execution/risk-management rules.",
+  "protocol_v1_2_unchanged": true,
+  "protocol_sha256": "c2aef8f85dfdf125285623b7b6556b78a43509124ee09985b047b365f929d3a6",
+  "v2_foundation_unchanged": true,
+  "v2_foundation": "75MA rising + SMA25>SMA75 + event adjusted close<=SMA25 + adjusted close crosses above SMA75",
+  "study_window": {
+    "first_event": "2021-09-24",
+    "last_event": "2026-09-03",
+    "foundation_event_count": 890,
+    "discovery_end": "2024-07-08",
+    "validation_start": "2024-09-09",
+    "discovery_count": 510,
+    "validation_count": 339
+  },
+  "predeclared_bins": {
+    "sma75_slope5_pct": [
+      [
+        "SLOPE_0_TO_0_25PCT",
+        0.0,
+        0.0025
+      ],
+      [
+        "SLOPE_0_25_TO_0_75PCT",
+        0.0025,
+        0.0075
+      ],
+      [
+        "SLOPE_GE_0_75PCT",
+        0.0075,
+        Infinity
+      ]
+    ],
+    "pullback25_pct": [
+      [
+        "PULLBACK_0_TO_1PCT",
+        0.0,
+        0.01
+      ],
+      [
+        "PULLBACK_1_TO_3PCT",
+        0.01,
+        0.03
+      ],
+      [
+        "PULLBACK_GE_3PCT",
+        0.03,
+        Infinity
+      ]
+    ],
+    "rs20_vs_topix": [
+      [
+        "RS20_LT_0",
+        -Infinity,
+        0.0
+      ],
+      [
+        "RS20_0_TO_3PCT",
+        0.0,
+        0.03
+      ],
+      [
+        "RS20_GE_3PCT",
+        0.03,
+        Infinity
+      ]
+    ],
+    "rs60_vs_topix": [
+      [
+        "RS60_LT_0",
+        -Infinity,
+        0.0
+      ],
+      [
+        "RS60_0_TO_5PCT",
+        0.0,
+        0.05
+      ],
+      [
+        "RS60_GE_5PCT",
+        0.05,
+        Infinity
+      ]
+    ],
+    "vol20_ann": [
+      [
+        "VOL20_LT_20PCT",
+        0.0,
+        0.2
+      ],
+      [
+        "VOL20_20_TO_35PCT",
+        0.2,
+        0.35
+      ],
+      [
+        "VOL20_GE_35PCT",
+        0.35,
+        Infinity
+      ]
+    ]
+  },
+  "pass_rule": {
+    "single_min_n40_each_phase": 80,
+    "pair_min_n40_each_phase": 60,
+    "requires": [
+      "discovery 20d and 40d mean return > v2 foundation",
+      "validation 20d and 40d mean return and win rate > v2 foundation",
+      "validation 20d and 40d mean max-down no worse than v2 foundation",
+      "validation mean-return improvement in >=3/4 horizons",
+      "validation win-rate improvement in >=3/4 horizons"
+    ]
+  },
+  "fundamentals": {
+    "status": "NOT_EXECUTED_NO_POINT_IN_TIME_SOURCE",
+    "requested_feature": "historical revenue growth + operating-income growth known as of each event date",
+    "reason": "The free runner currently has no verified point-in-time historical fundamentals feed with disclosure timestamps. Using today's Yahoo/yfinance financial-statement snapshot for past events could leak later revisions/future knowledge, so this factor is deliberately not scored.",
+    "requirement_to_enable": "Add a historical fundamentals source that preserves report/disclosure dates and values as known at that time; then predeclare growth bins before rerunning."
+  },
+  "single_filter_count": 15,
+  "single_filters_passed": 0,
+  "single_filters_ranked": [],
+  "pair_filter_count": 0,
+  "pairs_passed": 0,
+  "pairs_ranked": [],
+  "rank_plan": {
+    "C": {
+      "definition": "Frozen v2 foundation only",
+      "foundation": "75MA rising + SMA25>SMA75 + event close<=SMA25 + 75MA cross-up",
+      "status": "BASELINE"
+    },
+    "B": {
+      "definition": "v2 foundation + one individually validated expectancy filter",
+      "eligible_filters": [],
+      "status": "NO_FILTER_PASSED"
+    },
+    "A": {
+      "definition": "v2 foundation + a maximum of two expectancy filters; both must pass singly and the pair must pass again",
+      "eligible_pairs_ranked": [],
+      "top_pair": null,
+      "status": "NO_PAIR_PASSED"
+    },
+    "adoption_note": "A/B/C is a candidate-ranking proposal only. It does not modify v1.2 execution, stops, exits, or capital rules and should be forward-tested before live weighting changes."
+  },
+  "warnings": [
+    "Current monitored constituents are applied historically, so constituent/survivorship bias remains.",
+    "This is event-filter research, not exact full v1.2 realized trade P/L with all fills/exits.",
+    "The v2 foundation and candidate filter families were motivated by prior historical research; validation here is a robustness check, not pristine untouched OOS.",
+    "Do not add the fundamentals factor until a point-in-time historical disclosure source is connected."
+  ],
+  "generated_at_utc": "2026-09-07T04:14:43.024187+00:00"
+}
