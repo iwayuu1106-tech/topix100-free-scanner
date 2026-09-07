@@ -9,6 +9,7 @@ on:
       - "research_holdout.py"
       - "validate_v2_hypothesis.py"
       - "run_formal_validation.py"
+      - "research_expectancy_filters.py"
       - "universe.json"
       - "requirements.txt"
       - ".github/workflows/research.yml"
@@ -30,6 +31,7 @@ jobs:
       - run: python research_backtest_v2.py
       - run: python research_holdout.py
       - run: python run_formal_validation.py
+      - run: python research_expectancy_filters.py
       - name: Commit research outputs
         run: |
           git config user.name "topix100-bot"
