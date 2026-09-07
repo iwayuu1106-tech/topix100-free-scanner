@@ -29,7 +29,7 @@
       [
         "SLOPE_GE_0_75PCT",
         0.0075,
-        Infinity
+        "+INF"
       ]
     ],
     "pullback25_pct": [
@@ -46,13 +46,13 @@
       [
         "PULLBACK_GE_3PCT",
         0.03,
-        Infinity
+        "+INF"
       ]
     ],
     "rs20_vs_topix": [
       [
         "RS20_LT_0",
-        -Infinity,
+        "-INF",
         0.0
       ],
       [
@@ -63,13 +63,13 @@
       [
         "RS20_GE_3PCT",
         0.03,
-        Infinity
+        "+INF"
       ]
     ],
     "rs60_vs_topix": [
       [
         "RS60_LT_0",
-        -Infinity,
+        "-INF",
         0.0
       ],
       [
@@ -80,7 +80,7 @@
       [
         "RS60_GE_5PCT",
         0.05,
-        Infinity
+        "+INF"
       ]
     ],
     "vol20_ann": [
@@ -97,7 +97,7 @@
       [
         "VOL20_GE_35PCT",
         0.35,
-        Infinity
+        "+INF"
       ]
     ]
   },
@@ -149,5 +149,5 @@
     "The v2 foundation and candidate filter families were motivated by prior historical research; validation here is a robustness check, not pristine untouched OOS.",
     "Do not add the fundamentals factor until a point-in-time historical disclosure source is connected."
   ],
-  "generated_at_utc": "2026-09-07T04:14:43.024187+00:00"
+  "generated_at_utc": "2026-09-07T04:16:47.561637+00:00"
 }
