@@ -1,0 +1,1111 @@
+{
+  "status": "PASS_REALIZED_BACKTEST_PRETEST_1_0_CORRECTED_DATA_UNITS",
+  "v1_2_unchanged": true,
+  "v1_2_sha256": "c2aef8f85dfdf125285623b7b6556b78a43509124ee09985b047b365f929d3a6",
+  "execution_spec_file": "v2_execution_spec_pretest_1_0.json",
+  "execution_spec_sha256": "27891cb9d0f43ae59266a83c263d96cc17c2a95e624ce4b4400d0e9948a4dd83",
+  "data_source": "Yahoo Finance via yfinance auto_adjust=False/actions=True; OHLC reconstructed to historical raw yen/share using future split factors before applying frozen A12",
+  "common_latest_confirmed_date": "2026-09-04",
+  "frozen_event_file": "research/expectancy_foundation_enriched.csv",
+  "frozen_event_count": 890,
+  "capital_jpy": 300000.0,
+  "lot_shares": 100.0,
+  "split_action_column_missing_codes": [],
+  "results": {
+    "S1_V2_FOUNDATION": {
+      "all": {
+        "candidate_event_count": 890,
+        "filled_entry_count": 97,
+        "unfilled_expired_count": 30,
+        "skipped_insufficient_cash_count": 763,
+        "skipped_already_holding_count": 0,
+        "closed_trade_count": 95,
+        "win_rate": 0.23157894736842105,
+        "mean_pnl_per_trade_jpy": 805.4736809981497,
+        "mean_trade_return": 0.004016208825865159,
+        "avg_gain_return": 0.06100707510842205,
+        "avg_loss_return": -0.013341886304556877,
+        "payoff_ratio": 4.572597436060094,
+        "max_drawdown": -0.22261696097777062,
+        "total_return": 0.5227666575113932,
+        "annualized_return": 0.08877021521997008,
+        "ending_equity_jpy": 456829.99725341797,
+        "average_capital_utilization": 0.497858003611619,
+        "open_positions_end": 2,
+        "simulation_start": "2021-09-24",
+        "simulation_end": "2026-09-04"
+      },
+      "discovery": {
+        "candidate_event_count": 510,
+        "filled_entry_count": 64,
+        "unfilled_expired_count": 22,
+        "skipped_insufficient_cash_count": 424,
+        "skipped_already_holding_count": 0,
+        "closed_trade_count": 64,
+        "win_rate": 0.21875,
+        "mean_pnl_per_trade_jpy": -845.4687023162841,
+        "mean_trade_return": -0.004177423193053688,
+        "avg_gain_return": 0.02955482605345811,
+        "avg_loss_return": -0.013900462226609175,
+        "payoff_ratio": 2.1261757754272606,
+        "max_drawdown": -0.2200158507477944,
+        "total_return": -0.18036665649414063,
+        "annualized_return": -0.06517044273713624,
+        "ending_equity_jpy": 245890.0030517578,
+        "average_capital_utilization": 0.37173821683196856,
+        "open_positions_end": 0,
+        "simulation_start": "2021-09-24",
+        "simulation_end": "2024-09-06"
+      },
+      "validation": {
+        "candidate_event_count": 339,
+        "filled_entry_count": 34,
+        "unfilled_expired_count": 9,
+        "skipped_insufficient_cash_count": 296,
+        "skipped_already_holding_count": 0,
+        "closed_trade_count": 32,
+        "win_rate": 0.28125,
+        "mean_pnl_per_trade_jpy": 3326.874980926513,
+        "mean_trade_return": 0.01664816966180301,
+        "avg_gain_return": 0.09498537835004874,
+        "avg_loss_return": -0.014005520694467057,
+        "payoff_ratio": 6.781995501786173,
+        "max_drawdown": -0.1360069197143834,
+        "total_return": 0.6225666564941406,
+        "annualized_return": 0.27614079893597565,
+        "ending_equity_jpy": 486769.9969482422,
+        "average_capital_utilization": 0.6132155794215753,
+        "open_positions_end": 2,
+        "simulation_start": "2024-09-09",
+        "simulation_end": "2026-09-04"
+      }
+    },
+    "S2_V2_PLUS_SMA75_SLOPE_GE_0_75PCT": {
+      "all": {
+        "candidate_event_count": 207,
+        "filled_entry_count": 27,
+        "unfilled_expired_count": 5,
+        "skipped_insufficient_cash_count": 175,
+        "skipped_already_holding_count": 0,
+        "closed_trade_count": 26,
+        "win_rate": 0.19230769230769232,
+        "mean_pnl_per_trade_jpy": 2620.384521484375,
+        "mean_trade_return": 0.016356911888876457,
+        "avg_gain_return": 0.15797291080450906,
+        "avg_loss_return": -0.01736118309103607,
+        "payoff_ratio": 9.099201936651061,
+        "max_drawdown": -0.17990000813802087,
+        "total_return": 0.45443332519531254,
+        "annualized_return": 0.07870727653041576,
+        "ending_equity_jpy": 436329.99755859375,
+        "average_capital_utilization": 0.1900412366519617,
+        "open_positions_end": 1,
+        "simulation_start": "2021-09-24",
+        "simulation_end": "2026-09-04"
+      },
+      "discovery": {
+        "candidate_event_count": 100,
+        "filled_entry_count": 19,
+        "unfilled_expired_count": 3,
+        "skipped_insufficient_cash_count": 78,
+        "skipped_already_holding_count": 0,
+        "closed_trade_count": 19,
+        "win_rate": 0.10526315789473684,
+        "mean_pnl_per_trade_jpy": -2824.7369706003287,
+        "mean_trade_return": -0.015172932524889928,
+        "avg_gain_return": 0.002380400643877167,
+        "avg_loss_return": -0.01723803054474488,
+        "payoff_ratio": 0.1380900583566286,
+        "max_drawdown": -0.17990000813802087,
+        "total_return": -0.17890000813802087,
+        "annualized_return": -0.064604003211016,
+        "ending_equity_jpy": 246329.99755859375,
+        "average_capital_utilization": 0.028668065207701293,
+        "open_positions_end": 0,
+        "simulation_start": "2021-09-24",
+        "simulation_end": "2024-09-06"
+      },
+      "validation": {
+        "candidate_event_count": 91,
+        "filled_entry_count": 9,
+        "unfilled_expired_count": 2,
+        "skipped_insufficient_cash_count": 80,
+        "skipped_already_holding_count": 0,
+        "closed_trade_count": 8,
+        "win_rate": 0.25,
+        "mean_pnl_per_trade_jpy": 12700.0,
+        "mean_trade_return": 0.07316204407738072,
+        "avg_gain_return": 0.3519508533494927,
+        "avg_loss_return": -0.019767559013323253,
+        "payoff_ratio": 17.804467062032256,
+        "max_drawdown": -0.09687074829931974,
+        "total_return": 0.5660000000000001,
+        "annualized_return": 0.2535300346783107,
+        "ending_equity_jpy": 469800.0,
+        "average_capital_utilization": 0.36096392396435445,
+        "open_positions_end": 1,
+        "simulation_start": "2024-09-09",
+        "simulation_end": "2026-09-04"
+      }
+    },
+    "S3_V2_PLUS_RS20_GE_3PCT": {
+      "all": {
+        "candidate_event_count": 52,
+        "filled_entry_count": 10,
+        "unfilled_expired_count": 3,
+        "skipped_insufficient_cash_count": 39,
+        "skipped_already_holding_count": 0,
+        "closed_trade_count": 10,
+        "win_rate": 0.2,
+        "mean_pnl_per_trade_jpy": -1729.0006103515625,
+        "mean_trade_return": -0.012571619900368555,
+        "avg_gain_return": 0.009915465747668013,
+        "avg_loss_return": -0.018193391312377696,
+        "payoff_ratio": 0.5450037091722488,
+        "max_drawdown": -0.10282253581092526,
+        "total_return": -0.0576333536783854,
+        "annualized_return": -0.011933514025835312,
+        "ending_equity_jpy": 282709.9938964844,
+        "average_capital_utilization": 0.04972353126420814,
+        "open_positions_end": 0,
+        "simulation_start": "2021-09-24",
+        "simulation_end": "2026-09-04"
+      },
+      "discovery": {
+        "candidate_event_count": 20,
+        "filled_entry_count": 6,
+        "unfilled_expired_count": 1,
+        "skipped_insufficient_cash_count": 13,
+        "skipped_already_holding_count": 0,
+        "closed_trade_count": 6,
+        "win_rate": 0.3333333333333333,
+        "mean_pnl_per_trade_jpy": -395.0008138020833,
+        "mean_trade_return": -0.007558261549791903,
+        "avg_gain_return": 0.009915465747668013,
+        "avg_loss_return": -0.016295125198521863,
+        "payoff_ratio": 0.6084927625206248,
+        "max_drawdown": -0.060181785295158274,
+        "total_return": -0.007900016276041644,
+        "annualized_return": -0.0026837198297243736,
+        "ending_equity_jpy": 297629.9951171875,
+        "average_capital_utilization": 0.05232879671394307,
+        "open_positions_end": 0,
+        "simulation_start": "2021-09-24",
+        "simulation_end": "2024-09-06"
+      },
+      "validation": {
+        "candidate_event_count": 21,
+        "filled_entry_count": 2,
+        "unfilled_expired_count": 2,
+        "skipped_insufficient_cash_count": 17,
+        "skipped_already_holding_count": 0,
+        "closed_trade_count": 2,
+        "win_rate": 0.0,
+        "mean_pnl_per_trade_jpy": -6900.0,
+        "mean_trade_return": -0.025627698349829073,
+        "avg_gain_return": null,
+        "avg_loss_return": -0.025627698349829073,
+        "payoff_ratio": null,
+        "max_drawdown": -0.06699426699426703,
+        "total_return": -0.04600000000000004,
+        "annualized_return": -0.023445215290353483,
+        "ending_equity_jpy": 286200.0,
+        "average_capital_utilization": 0.04476318894989577,
+        "open_positions_end": 0,
+        "simulation_start": "2024-09-09",
+        "simulation_end": "2026-09-04"
+      }
+    },
+    "S4_V2_PLUS_BOTH": {
+      "all": {
+        "candidate_event_count": 10,
+        "filled_entry_count": 0,
+        "unfilled_expired_count": 0,
+        "skipped_insufficient_cash_count": 10,
+        "skipped_already_holding_count": 0,
+        "closed_trade_count": 0,
+        "win_rate": null,
+        "mean_pnl_per_trade_jpy": null,
+        "mean_trade_return": null,
+        "avg_gain_return": null,
+        "avg_loss_return": null,
+        "payoff_ratio": null,
+        "max_drawdown": 0.0,
+        "total_return": 0.0,
+        "annualized_return": 0.0,
+        "ending_equity_jpy": 300000.0,
+        "average_capital_utilization": 0.0,
+        "open_positions_end": 0,
+        "simulation_start": "2021-09-24",
+        "simulation_end": "2026-09-04"
+      },
+      "discovery": {
+        "candidate_event_count": 1,
+        "filled_entry_count": 0,
+        "unfilled_expired_count": 0,
+        "skipped_insufficient_cash_count": 1,
+        "skipped_already_holding_count": 0,
+        "closed_trade_count": 0,
+        "win_rate": null,
+        "mean_pnl_per_trade_jpy": null,
+        "mean_trade_return": null,
+        "avg_gain_return": null,
+        "avg_loss_return": null,
+        "payoff_ratio": null,
+        "max_drawdown": 0.0,
+        "total_return": 0.0,
+        "annualized_return": 0.0,
+        "ending_equity_jpy": 300000.0,
+        "average_capital_utilization": 0.0,
+        "open_positions_end": 0,
+        "simulation_start": "2021-09-24",
+        "simulation_end": "2024-09-06"
+      },
+      "validation": {
+        "candidate_event_count": 5,
+        "filled_entry_count": 0,
+        "unfilled_expired_count": 0,
+        "skipped_insufficient_cash_count": 5,
+        "skipped_already_holding_count": 0,
+        "closed_trade_count": 0,
+        "win_rate": null,
+        "mean_pnl_per_trade_jpy": null,
+        "mean_trade_return": null,
+        "avg_gain_return": null,
+        "avg_loss_return": null,
+        "payoff_ratio": null,
+        "max_drawdown": 0.0,
+        "total_return": 0.0,
+        "annualized_return": 0.0,
+        "ending_equity_jpy": 300000.0,
+        "average_capital_utilization": 0.0,
+        "open_positions_end": 0,
+        "simulation_start": "2024-09-09",
+        "simulation_end": "2026-09-04"
+      }
+    }
+  },
+  "winner_analysis": {
+    "minimum_closed_trades_each_phase": 30,
+    "eligible": {
+      "S1_V2_FOUNDATION": true,
+      "S2_V2_PLUS_SMA75_SLOPE_GE_0_75PCT": false,
+      "S3_V2_PLUS_RS20_GE_3PCT": false,
+      "S4_V2_PLUS_BOTH": false
+    },
+    "highest_expectancy": null,
+    "most_stable": null,
+    "lowest_risk": "S1_V2_FOUNDATION",
+    "note": "事前固定した勝者ルールをそのまま適用。サンプル不足戦略は数値が良くても勝者にしない。"
+  },
+  "caveats": [
+    "fees/taxes/slippage/dividends excluded",
+    "current monitored constituents are applied historically; survivorship/constituent bias remains",
+    "v2 event foundation was motivated by prior historical research; validation is not pristine untouched OOS",
+    "PRETEST 1.0 is a separate mechanized execution model, not a claim that all added assumptions are book rules"
+  ],
+  "generated_at_utc": "2026-09-07T05:13:29.827630+00:00",
+  "data_quality_addendum_file": "v2_execution_data_quality_addendum_pretest_1_0.json",
+  "data_quality_addendum_sha256": "a1c8e2bbf515e7625474f9eb66757f64126f168ec721cb7ce6348e2742bc873e",
+  "data_representation_correction_file": "v2_execution_data_representation_correction_pretest_1_0.json",
+  "data_representation_correction_sha256": "53618707957dca6e48e418ee326aac62972f0e5d0fec6367a1c3a7b064bc636f",
+  "strategy_rules_modified_by_correction": false,
+  "invalid_prior_result_status": "INVALID_IMPLEMENTATION_DOUBLE_COUNTED_SPLITS",
+  "ohlc_envelope_repair_count": 10,
+  "split_event_count": 63,
+  "raw_reconstructed_row_count": 53998,
+  "raw_reconstruction_audit": [
+    {
+      "code": "1925",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "1928",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "2502",
+      "rows": 1466,
+      "rows_reconstructed": 993,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "2503",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "2802",
+      "rows": 1466,
+      "rows_reconstructed": 1113,
+      "max_future_split_factor": 2.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "2914",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "3382",
+      "rows": 1466,
+      "rows_reconstructed": 849,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "3407",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "4063",
+      "rows": 1466,
+      "rows_reconstructed": 625,
+      "max_future_split_factor": 5.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "4188",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "4307",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "4452",
+      "rows": 1466,
+      "rows_reconstructed": 1418,
+      "max_future_split_factor": 2.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "4502",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "4503",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "4507",
+      "rows": 1466,
+      "rows_reconstructed": 993,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "4519",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "4543",
+      "rows": 1466,
+      "rows_reconstructed": 869,
+      "max_future_split_factor": 2.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "4568",
+      "rows": 1466,
+      "rows_reconstructed": 14,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "4578",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "4661",
+      "rows": 1466,
+      "rows_reconstructed": 625,
+      "max_future_split_factor": 5.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "4689",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "4901",
+      "rows": 1466,
+      "rows_reconstructed": 869,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "5020",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "5108",
+      "rows": 1466,
+      "rows_reconstructed": 1299,
+      "max_future_split_factor": 2.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "5401",
+      "rows": 1466,
+      "rows_reconstructed": 1237,
+      "max_future_split_factor": 5.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "5802",
+      "rows": 1466,
+      "rows_reconstructed": 1418,
+      "max_future_split_factor": 4.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "5803",
+      "rows": 1466,
+      "rows_reconstructed": 1357,
+      "max_future_split_factor": 6.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "6098",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "6146",
+      "rows": 1466,
+      "rows_reconstructed": 625,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "6178",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "6273",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "6301",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "6326",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "6367",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "6501",
+      "rows": 1466,
+      "rows_reconstructed": 931,
+      "max_future_split_factor": 5.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "6503",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "6701",
+      "rows": 1466,
+      "rows_reconstructed": 1113,
+      "max_future_split_factor": 5.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "6702",
+      "rows": 1466,
+      "rows_reconstructed": 869,
+      "max_future_split_factor": 10.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "6723",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "6752",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "6758",
+      "rows": 1466,
+      "rows_reconstructed": 993,
+      "max_future_split_factor": 5.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "6762",
+      "rows": 1466,
+      "rows_reconstructed": 993,
+      "max_future_split_factor": 15.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 2
+    },
+    {
+      "code": "6857",
+      "rows": 1466,
+      "rows_reconstructed": 749,
+      "max_future_split_factor": 4.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "6861",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "6902",
+      "rows": 1466,
+      "rows_reconstructed": 749,
+      "max_future_split_factor": 4.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "6920",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "6954",
+      "rows": 1466,
+      "rows_reconstructed": 625,
+      "max_future_split_factor": 5.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "6971",
+      "rows": 1466,
+      "rows_reconstructed": 811,
+      "max_future_split_factor": 4.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "6981",
+      "rows": 1466,
+      "rows_reconstructed": 749,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "7011",
+      "rows": 1466,
+      "rows_reconstructed": 869,
+      "max_future_split_factor": 10.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "7182",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "7203",
+      "rows": 1466,
+      "rows_reconstructed": 258,
+      "max_future_split_factor": 5.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "7267",
+      "rows": 1466,
+      "rows_reconstructed": 749,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "7269",
+      "rows": 1466,
+      "rows_reconstructed": 869,
+      "max_future_split_factor": 4.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "7270",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "7309",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "7733",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "7741",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "7751",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "7832",
+      "rows": 1466,
+      "rows_reconstructed": 625,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "7936",
+      "rows": 1466,
+      "rows_reconstructed": 931,
+      "max_future_split_factor": 4.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "7974",
+      "rows": 1466,
+      "rows_reconstructed": 503,
+      "max_future_split_factor": 10.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "8001",
+      "rows": 1466,
+      "rows_reconstructed": 1299,
+      "max_future_split_factor": 5.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "8002",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "8015",
+      "rows": 1466,
+      "rows_reconstructed": 931,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "8031",
+      "rows": 1466,
+      "rows_reconstructed": 931,
+      "max_future_split_factor": 2.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "8035",
+      "rows": 1466,
+      "rows_reconstructed": 625,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "8053",
+      "rows": 1466,
+      "rows_reconstructed": 1418,
+      "max_future_split_factor": 4.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "8058",
+      "rows": 1466,
+      "rows_reconstructed": 811,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "8113",
+      "rows": 1466,
+      "rows_reconstructed": 1056,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "8267",
+      "rows": 1466,
+      "rows_reconstructed": 1217,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "8306",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "8308",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "8309",
+      "rows": 1466,
+      "rows_reconstructed": 1440,
+      "max_future_split_factor": 8.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 2
+    },
+    {
+      "code": "8316",
+      "rows": 1466,
+      "rows_reconstructed": 993,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "8411",
+      "rows": 1466,
+      "rows_reconstructed": 14,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 0.1,
+      "split_event_count": 1
+    },
+    {
+      "code": "8591",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "8604",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "8630",
+      "rows": 1466,
+      "rows_reconstructed": 869,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "8697",
+      "rows": 1466,
+      "rows_reconstructed": 993,
+      "max_future_split_factor": 2.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "8725",
+      "rows": 1466,
+      "rows_reconstructed": 869,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "8729",
+      "rows": 229,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "8750",
+      "rows": 1466,
+      "rows_reconstructed": 1113,
+      "max_future_split_factor": 4.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "8766",
+      "rows": 1466,
+      "rows_reconstructed": 503,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "8801",
+      "rows": 1466,
+      "rows_reconstructed": 869,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "8802",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "8830",
+      "rows": 1466,
+      "rows_reconstructed": 1299,
+      "max_future_split_factor": 2.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "9020",
+      "rows": 1466,
+      "rows_reconstructed": 869,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "9021",
+      "rows": 1466,
+      "rows_reconstructed": 869,
+      "max_future_split_factor": 2.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "9022",
+      "rows": 1466,
+      "rows_reconstructed": 749,
+      "max_future_split_factor": 5.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "9101",
+      "rows": 1466,
+      "rows_reconstructed": 503,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "9104",
+      "rows": 1466,
+      "rows_reconstructed": 380,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "9202",
+      "rows": 1466,
+      "rows_reconstructed": 0,
+      "max_future_split_factor": 1.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 0
+    },
+    {
+      "code": "9432",
+      "rows": 1466,
+      "rows_reconstructed": 687,
+      "max_future_split_factor": 25.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "9433",
+      "rows": 1466,
+      "rows_reconstructed": 1113,
+      "max_future_split_factor": 2.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "9434",
+      "rows": 1466,
+      "rows_reconstructed": 993,
+      "max_future_split_factor": 10.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "9735",
+      "rows": 1466,
+      "rows_reconstructed": 993,
+      "max_future_split_factor": 2.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "9983",
+      "rows": 1466,
+      "rows_reconstructed": 603,
+      "max_future_split_factor": 3.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    },
+    {
+      "code": "9984",
+      "rows": 1466,
+      "rows_reconstructed": 1299,
+      "max_future_split_factor": 4.0,
+      "min_future_split_factor": 1.0,
+      "split_event_count": 1
+    }
+  ]
+}
