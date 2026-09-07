@@ -1,0 +1,11 @@
+{
+  "artifact": "v2実売買実行仕様 PRETEST 1.0 固定マニフェスト",
+  "freeze_status": "FROZEN_BEFORE_REALIZED_BACKTEST",
+  "spec_file": "v2_execution_spec_pretest_1_0.json",
+  "spec_sha256": "27891cb9d0f43ae59266a83c263d96cc17c2a95e624ce4b4400d0e9948a4dd83",
+  "spec_commit_sha": "5ec5301ac9df67812182d27275a322f037eddb75",
+  "parent_v1_2_sha256": "c2aef8f85dfdf125285623b7b6556b78a43509124ee09985b047b365f929d3a6",
+  "v1_2_modified": false,
+  "realized_backtest_status_at_freeze": "NOT_RUN_YET",
+  "rule": "このマニフェスト作成後にのみPRETEST 1.0の新規実現売買バックテストを実行する。結果を見た後にこの仕様を上書きしない。"
+}
