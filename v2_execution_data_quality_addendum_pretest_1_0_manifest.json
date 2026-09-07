@@ -1,0 +1,12 @@
+{
+  "artifact": "v2実売買実行仕様 PRETEST 1.0 データ品質アドオン固定マニフェスト",
+  "freeze_status": "FROZEN_BEFORE_FIRST_SUCCESSFUL_REALIZED_BACKTEST",
+  "addendum_file": "v2_execution_data_quality_addendum_pretest_1_0.json",
+  "addendum_sha256": "a1c8e2bbf515e7625474f9eb66757f64126f168ec721cb7ce6348e2742bc873e",
+  "addendum_commit_sha": "0f4bef742d2bcc8be155cc06614ff4468b5fd577",
+  "parent_execution_spec_sha256": "27891cb9d0f43ae59266a83c263d96cc17c2a95e624ce4b4400d0e9948a4dd83",
+  "v1_2_sha256": "c2aef8f85dfdf125285623b7b6556b78a43509124ee09985b047b365f929d3a6",
+  "v1_2_modified": false,
+  "successful_realized_backtest_at_freeze": false,
+  "rule": "データ修復は全銘柄・全期間へ同じ数学的不変条件で適用し、実現損益を見て変更しない。"
+}
