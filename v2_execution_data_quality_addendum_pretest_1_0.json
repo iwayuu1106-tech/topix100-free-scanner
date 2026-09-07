@@ -1,0 +1,39 @@
+{
+  "artifact": "v2実売買実行仕様 PRETEST 1.0 データ品質アドオン",
+  "status": "FROZEN_BEFORE_SUCCESSFUL_REALIZED_BACKTEST",
+  "parent_execution_spec_file": "v2_execution_spec_pretest_1_0.json",
+  "parent_execution_spec_sha256": "27891cb9d0f43ae59266a83c263d96cc17c2a95e624ce4b4400d0e9948a4dd83",
+  "v1_2_sha256": "c2aef8f85dfdf125285623b7b6556b78a43509124ee09985b047b365f929d3a6",
+  "v1_2_modified": false,
+  "realized_backtest_status_at_freeze": "NO_SUCCESSFUL_REALIZED_BACKTEST_YET",
+  "observed_data_issue": {
+    "description": "Yahoo/yfinance raw daily OHLC returned a small set of rows where Close was slightly outside the reported High/Low envelope. The initial realized-backtest attempts stopped at input validation before any realized trade metrics were produced.",
+    "known_failure_date": "2022-05-17",
+    "known_affected_row_count": 10,
+    "selection_rule": "The repair rule below is universal and is not limited to the known date or tickers."
+  },
+  "frozen_repair_rule": {
+    "scope": "All raw OHLC rows loaded for PRETEST 1.0 before indicator calculation or order simulation.",
+    "if_high_invalid": "If High < max(Open, High, Low, Close), replace High with max(Open, High, Low, Close).",
+    "if_low_invalid": "If Low > min(Open, High, Low, Close), replace Low with min(Open, High, Low, Close).",
+    "unchanged_fields": [
+      "Open",
+      "Close",
+      "Volume",
+      "Stock Splits"
+    ],
+    "post_condition": "After repair, High >= max(Open, Close, Low) and Low <= min(Open, Close, High).",
+    "no_return_based_selection": true,
+    "strategy_change": false,
+    "reason": "This enforces the mathematical OHLC envelope while preserving every reported Open and Close. It is a source-data normalization rule, not an entry/exit optimization."
+  },
+  "audit_requirements": [
+    "Log every repaired row with ticker, date, original OHLC, repaired High/Low.",
+    "Fail the run if any OHLC envelope violation remains after the universal repair.",
+    "Report repair count in the final summary and human-readable report."
+  ],
+  "anti_hindsight": {
+    "rule": "Freeze this addendum and its SHA256 before the first successful PRETEST 1.0 realized-trade simulation. Do not alter this repair based on realized P/L.",
+    "future_changes": "Any later data-cleaning change must be a new version/addendum and be pre-registered before a new OOS/forward evaluation."
+  }
+}
