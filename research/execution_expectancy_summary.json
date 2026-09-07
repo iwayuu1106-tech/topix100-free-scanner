@@ -1,0 +1,712 @@
+{
+  "status": "PASS_AUDIT_FORMAL_REALIZED_EXPECTANCY_UNSCORABLE",
+  "protocol_v1_2_unchanged": true,
+  "protocol_sha256": "c2aef8f85dfdf125285623b7b6556b78a43509124ee09985b047b365f929d3a6",
+  "candidate_selection_assumption": "The previously frozen v2 foundation is used only to select candidate events; this does not resolve frozen v1.2 exit integration, fill ambiguity, or wave-based allocation ambiguity.",
+  "strategies": {
+    "S1_V2_FOUNDATION": {
+      "description": "v2 foundation only",
+      "periods": {
+        "all": {
+          "candidate_event_count": 890,
+          "event_study_proxy": {
+            "h5": {
+              "n": 888,
+              "win_rate": 0.5855855855855856,
+              "mean_return": 0.006633699458269734,
+              "median_return": 0.0069093032662097004,
+              "avg_gain": 0.034918271944786736,
+              "avg_loss": -0.03379277215522199,
+              "payoff_ratio": 1.0333059325347722,
+              "mean_max_up": 0.03484857584655591,
+              "mean_max_down": -0.028735602483463286
+            },
+            "h10": {
+              "n": 885,
+              "win_rate": 0.6124293785310735,
+              "mean_return": 0.018222813593225074,
+              "median_return": 0.0137964552834752,
+              "avg_gain": 0.051604234559490904,
+              "avg_loss": -0.03472816745231636,
+              "payoff_ratio": 1.4859475274745289,
+              "mean_max_up": 0.05383068677152409,
+              "mean_max_down": -0.0378667484145096
+            },
+            "h20": {
+              "n": 881,
+              "win_rate": 0.6322360953461975,
+              "mean_return": 0.028035582450828503,
+              "median_return": 0.0216840857188369,
+              "avg_gain": 0.07453895137127405,
+              "avg_loss": -0.05191002399573992,
+              "payoff_ratio": 1.435925966387363,
+              "mean_max_up": 0.0835128248092439,
+              "mean_max_down": -0.05264031187945314
+            },
+            "h40": {
+              "n": 862,
+              "win_rate": 0.6334106728538283,
+              "mean_return": 0.04607981897261727,
+              "median_return": 0.03495548056535065,
+              "avg_gain": 0.11101395412738882,
+              "avg_loss": -0.06611650316189303,
+              "payoff_ratio": 1.679065722147461,
+              "mean_max_up": 0.1236821904705475,
+              "mean_max_down": -0.06973591911040149
+            }
+          }
+        },
+        "discovery": {
+          "candidate_event_count": 510,
+          "event_study_proxy": {
+            "h5": {
+              "n": 510,
+              "win_rate": 0.5882352941176471,
+              "mean_return": 0.008311232011638182,
+              "median_return": 0.00604256719426385,
+              "avg_gain": 0.031378225278867224,
+              "avg_loss": -0.025120093484100468,
+              "payoff_ratio": 1.2491285232966105,
+              "mean_max_up": 0.03083444780614252,
+              "mean_max_down": -0.022044782319411347
+            },
+            "h10": {
+              "n": 510,
+              "win_rate": 0.5980392156862745,
+              "mean_return": 0.016050708427585696,
+              "median_return": 0.0112942493430142,
+              "avg_gain": 0.04717510760857628,
+              "avg_loss": -0.030404639816407168,
+              "payoff_ratio": 1.5515759401668463,
+              "mean_max_up": 0.04771878412712926,
+              "mean_max_down": -0.030317385134312504
+            },
+            "h20": {
+              "n": 510,
+              "win_rate": 0.6392156862745098,
+              "mean_return": 0.02872127278920026,
+              "median_return": 0.01917723753351315,
+              "avg_gain": 0.06895017091033945,
+              "avg_loss": -0.042553840186296356,
+              "payoff_ratio": 1.6203043158615686,
+              "mean_max_up": 0.07461900445324654,
+              "mean_max_down": -0.04172387141156828
+            },
+            "h40": {
+              "n": 510,
+              "win_rate": 0.6137254901960785,
+              "mean_return": 0.03629057741462762,
+              "median_return": 0.0304258002665848,
+              "avg_gain": 0.09681487064551422,
+              "avg_loss": -0.0598723859420602,
+              "payoff_ratio": 1.6170204197174314,
+              "mean_max_up": 0.1069863618764184,
+              "mean_max_down": -0.062184653043467354
+            }
+          }
+        },
+        "validation": {
+          "candidate_event_count": 339,
+          "event_study_proxy": {
+            "h5": {
+              "n": 337,
+              "win_rate": 0.5905044510385756,
+              "mean_return": 0.009869116143803473,
+              "median_return": 0.0085441002000679,
+              "avg_gain": 0.040101860476169,
+              "avg_loss": -0.03397356273208658,
+              "payoff_ratio": 1.1803843121314594,
+              "mean_max_up": 0.04030497518047868,
+              "mean_max_down": -0.03184997369611812
+            },
+            "h10": {
+              "n": 334,
+              "win_rate": 0.6317365269461078,
+              "mean_return": 0.022175031183574296,
+              "median_return": 0.01603426215314455,
+              "avg_gain": 0.05720625413247065,
+              "avg_loss": -0.03822999349702864,
+              "payoff_ratio": 1.4963710139505233,
+              "mean_max_up": 0.06188536118469786,
+              "mean_max_down": -0.04224944505865693
+            },
+            "h20": {
+              "n": 330,
+              "win_rate": 0.6363636363636364,
+              "mean_return": 0.02938931218942123,
+              "median_return": 0.02596591820110345,
+              "avg_gain": 0.08296977211165235,
+              "avg_loss": -0.06437649267448323,
+              "payoff_ratio": 1.2888209448002268,
+              "mean_max_up": 0.09631633275894219,
+              "mean_max_down": -0.06051819903357561
+            },
+            "h40": {
+              "n": 311,
+              "win_rate": 0.6591639871382636,
+              "mean_return": 0.059449703855813066,
+              "median_return": 0.0418633715489689,
+              "avg_gain": 0.13047795617188498,
+              "avg_loss": -0.07791625581206181,
+              "payoff_ratio": 1.6745922248446437,
+              "mean_max_up": 0.1494017868831196,
+              "mean_max_down": -0.0735636681341914
+            }
+          }
+        }
+      },
+      "formal_realized_trade_metrics": {
+        "status": "UNSCORABLE_UNDER_FROZEN_V1_2_WITH_DAILY_OHLC",
+        "win_rate": null,
+        "mean_pnl_per_trade": null,
+        "avg_gain": null,
+        "avg_loss": null,
+        "payoff_ratio": null,
+        "max_drawdown": null,
+        "annual_return": null,
+        "capital_efficiency": null,
+        "official_trade_count": null
+      }
+    },
+    "S2_V2_PLUS_SMA75_SLOPE_GE_0_75PCT": {
+      "description": "v2 foundation + 75MA 5-session rise >= 0.75%",
+      "periods": {
+        "all": {
+          "candidate_event_count": 207,
+          "event_study_proxy": {
+            "h5": {
+              "n": 207,
+              "win_rate": 0.5942028985507246,
+              "mean_return": 0.0067775082356274115,
+              "median_return": 0.0087124617153908,
+              "avg_gain": 0.04147757364952949,
+              "avg_loss": -0.0440333018347292,
+              "payoff_ratio": 0.9419591972731874,
+              "mean_max_up": 0.04354033754914691,
+              "mean_max_down": -0.03918173337577114
+            },
+            "h10": {
+              "n": 205,
+              "win_rate": 0.6731707317073171,
+              "mean_return": 0.033084842579559966,
+              "median_return": 0.0292140437284877,
+              "avg_gain": 0.06513341670880268,
+              "avg_loss": -0.032925653388133996,
+              "payoff_ratio": 1.9781966341258992,
+              "mean_max_up": 0.07187837005914399,
+              "mean_max_down": -0.0475019251067341
+            },
+            "h20": {
+              "n": 204,
+              "win_rate": 0.7009803921568627,
+              "mean_return": 0.043394167982408846,
+              "median_return": 0.036634111225350305,
+              "avg_gain": 0.0900317282061728,
+              "avg_loss": -0.06593650598477553,
+              "payoff_ratio": 1.365430680038775,
+              "mean_max_up": 0.11408399865325645,
+              "mean_max_down": -0.06326099672701606
+            },
+            "h40": {
+              "n": 194,
+              "win_rate": 0.711340206185567,
+              "mean_return": 0.08057855379877595,
+              "median_return": 0.07167110277189775,
+              "avg_gain": 0.15063043696561113,
+              "avg_loss": -0.0920493011480678,
+              "payoff_ratio": 1.6364104353525883,
+              "mean_max_up": 0.17755041547141892,
+              "mean_max_down": -0.07953281766946255
+            }
+          }
+        },
+        "discovery": {
+          "candidate_event_count": 100,
+          "event_study_proxy": {
+            "h5": {
+              "n": 100,
+              "win_rate": 0.59,
+              "mean_return": 0.009042344816918855,
+              "median_return": 0.0063932855395559,
+              "avg_gain": 0.03259962105245538,
+              "avg_loss": -0.024857150253731256,
+              "payoff_ratio": 1.3114786176087068,
+              "mean_max_up": 0.03490881893349286,
+              "mean_max_down": -0.025288911788075262
+            },
+            "h10": {
+              "n": 100,
+              "win_rate": 0.63,
+              "mean_return": 0.0263708882829626,
+              "median_return": 0.0131920481068216,
+              "avg_gain": 0.05870963876227176,
+              "avg_loss": -0.02869238956018545,
+              "payoff_ratio": 2.046174601077468,
+              "mean_max_up": 0.06139807843341103,
+              "mean_max_down": -0.03221343273499303
+            },
+            "h20": {
+              "n": 100,
+              "win_rate": 0.7,
+              "mean_return": 0.04923491318739335,
+              "median_return": 0.037194102357478095,
+              "avg_gain": 0.09251267029938763,
+              "avg_loss": -0.05174652007392669,
+              "payoff_ratio": 1.7878046710623468,
+              "mean_max_up": 0.10220133220956612,
+              "mean_max_down": -0.04372974777747417
+            },
+            "h40": {
+              "n": 100,
+              "win_rate": 0.69,
+              "mean_return": 0.0632376642081193,
+              "median_return": 0.0567959142800762,
+              "avg_gain": 0.12528368648534702,
+              "avg_loss": -0.07486477247345202,
+              "payoff_ratio": 1.6734664695571495,
+              "mean_max_up": 0.14721248066170897,
+              "mean_max_down": -0.06522337959079509
+            }
+          }
+        },
+        "validation": {
+          "candidate_event_count": 91,
+          "event_study_proxy": {
+            "h5": {
+              "n": 91,
+              "win_rate": 0.5934065934065934,
+              "mean_return": 0.008272853124984646,
+              "median_return": 0.0130594043637521,
+              "avg_gain": 0.04878026564865515,
+              "avg_loss": -0.050846073260912845,
+              "payoff_ratio": 0.9593713441418148,
+              "mean_max_up": 0.05061409857587102,
+              "mean_max_down": -0.04599930994456182
+            },
+            "h10": {
+              "n": 89,
+              "win_rate": 0.6966292134831461,
+              "mean_return": 0.037515513510817805,
+              "median_return": 0.0398329765102729,
+              "avg_gain": 0.06952702449729063,
+              "avg_loss": -0.03599240060626796,
+              "payoff_ratio": 1.9317140097952434,
+              "mean_max_up": 0.07987169942417316,
+              "mean_max_down": -0.05731876185357918
+            },
+            "h20": {
+              "n": 88,
+              "win_rate": 0.7159090909090909,
+              "mean_return": 0.038426647014647715,
+              "median_return": 0.0373198413227278,
+              "avg_gain": 0.08482288377373659,
+              "avg_loss": -0.0784918696182562,
+              "payoff_ratio": 1.0806582157651634,
+              "mean_max_up": 0.1245736408474269,
+              "mean_max_down": -0.07596774086963681
+            },
+            "h40": {
+              "n": 78,
+              "win_rate": 0.7435897435897436,
+              "mean_return": 0.09496268325130193,
+              "median_return": 0.10279886480315101,
+              "avg_gain": 0.1704438244123472,
+              "avg_loss": -0.12393262611572933,
+              "payoff_ratio": 1.3752942203708758,
+              "mean_max_up": 0.2123691290996453,
+              "mean_max_down": -0.0870391273248164
+            }
+          }
+        }
+      },
+      "formal_realized_trade_metrics": {
+        "status": "UNSCORABLE_UNDER_FROZEN_V1_2_WITH_DAILY_OHLC",
+        "win_rate": null,
+        "mean_pnl_per_trade": null,
+        "avg_gain": null,
+        "avg_loss": null,
+        "payoff_ratio": null,
+        "max_drawdown": null,
+        "annual_return": null,
+        "capital_efficiency": null,
+        "official_trade_count": null
+      }
+    },
+    "S3_V2_PLUS_RS20_GE_3PCT": {
+      "description": "v2 foundation + 20-session relative strength vs TOPIX >= +3%",
+      "periods": {
+        "all": {
+          "candidate_event_count": 52,
+          "event_study_proxy": {
+            "h5": {
+              "n": 52,
+              "win_rate": 0.7692307692307693,
+              "mean_return": 0.014905145827078341,
+              "median_return": 0.01879963183279145,
+              "avg_gain": 0.03144692049801779,
+              "avg_loss": -0.04023410307605315,
+              "payoff_ratio": 0.7815986462671916,
+              "mean_max_up": 0.04351219998022046,
+              "mean_max_down": -0.028145145955733482
+            },
+            "h10": {
+              "n": 52,
+              "win_rate": 0.8461538461538461,
+              "mean_return": 0.03853237661802665,
+              "median_return": 0.041238246768061204,
+              "avg_gain": 0.05178912652716006,
+              "avg_loss": -0.03437974788220716,
+              "payoff_ratio": 1.506384709527289,
+              "mean_max_up": 0.06566374410260131,
+              "mean_max_down": -0.0329749656403449
+            },
+            "h20": {
+              "n": 52,
+              "win_rate": 0.7115384615384616,
+              "mean_return": 0.041920110107682866,
+              "median_return": 0.041055047647747644,
+              "avg_gain": 0.07705893829567867,
+              "avg_loss": -0.04475566608937342,
+              "payoff_ratio": 1.7217694434889708,
+              "mean_max_up": 0.10417879134996078,
+              "mean_max_down": -0.04523687756354155
+            },
+            "h40": {
+              "n": 51,
+              "win_rate": 0.7450980392156863,
+              "mean_return": 0.06662478485817871,
+              "median_return": 0.0640232228064101,
+              "avg_gain": 0.11024918331175826,
+              "avg_loss": -0.060892687544592324,
+              "payoff_ratio": 1.8105488155867924,
+              "mean_max_up": 0.13807565991229712,
+              "mean_max_down": -0.05989716237673356
+            }
+          }
+        },
+        "discovery": {
+          "candidate_event_count": 20,
+          "event_study_proxy": {
+            "h5": {
+              "n": 20,
+              "win_rate": 0.7,
+              "mean_return": 0.006298268285168915,
+              "median_return": 0.01397882099782435,
+              "avg_gain": 0.024702186648227525,
+              "avg_loss": -0.03664420789530117,
+              "payoff_ratio": 0.6741088992510341,
+              "mean_max_up": 0.03168789480221717,
+              "mean_max_down": -0.026543147117441757
+            },
+            "h10": {
+              "n": 20,
+              "win_rate": 0.8,
+              "mean_return": 0.023892913435843356,
+              "median_return": 0.022126861111051152,
+              "avg_gain": 0.03966990158294068,
+              "avg_loss": -0.03921503915254597,
+              "payoff_ratio": 1.0115991833802664,
+              "mean_max_up": 0.04928944978129202,
+              "mean_max_down": -0.03220145626587861
+            },
+            "h20": {
+              "n": 20,
+              "win_rate": 0.75,
+              "mean_return": 0.041098799493876695,
+              "median_return": 0.03893711674302555,
+              "avg_gain": 0.06465569687694803,
+              "avg_loss": -0.02957189265533728,
+              "payoff_ratio": 2.1863902196087084,
+              "mean_max_up": 0.07802943595287287,
+              "mean_max_down": -0.03775016112869268
+            },
+            "h40": {
+              "n": 20,
+              "win_rate": 0.65,
+              "mean_return": 0.057431391770810566,
+              "median_return": 0.05062510915574675,
+              "avg_gain": 0.11303466389459664,
+              "avg_loss": -0.045831827887649244,
+              "payoff_ratio": 2.4662918566478824,
+              "mean_max_up": 0.11672527510129907,
+              "mean_max_down": -0.054275440017902896
+            }
+          }
+        },
+        "validation": {
+          "candidate_event_count": 21,
+          "event_study_proxy": {
+            "h5": {
+              "n": 21,
+              "win_rate": 0.8571428571428571,
+              "mean_return": 0.03011770979720585,
+              "median_return": 0.0321684795186298,
+              "avg_gain": 0.04014315468152754,
+              "avg_loss": -0.030034959508724268,
+              "payoff_ratio": 1.336547654404766,
+              "mean_max_up": 0.057703114386304426,
+              "mean_max_down": -0.022241617717452967
+            },
+            "h10": {
+              "n": 21,
+              "win_rate": 0.8571428571428571,
+              "mean_return": 0.054854820729551425,
+              "median_return": 0.0458258790540213,
+              "avg_gain": 0.06884383481512747,
+              "avg_loss": -0.029079263783904866,
+              "payoff_ratio": 2.3674545314050204,
+              "mean_max_up": 0.08454126249398108,
+              "mean_max_down": -0.0277423474689055
+            },
+            "h20": {
+              "n": 21,
+              "win_rate": 0.7142857142857143,
+              "mean_return": 0.05329256375983582,
+              "median_return": 0.0655706646978031,
+              "avg_gain": 0.10272634932973529,
+              "avg_loss": -0.07029190016491284,
+              "payoff_ratio": 1.461425129904406,
+              "mean_max_up": 0.13196095925329943,
+              "mean_max_down": -0.04460335997838802
+            },
+            "h40": {
+              "n": 20,
+              "win_rate": 0.8,
+              "mean_return": 0.0796934730081111,
+              "median_return": 0.058533140855115795,
+              "avg_gain": 0.11349181223898341,
+              "avg_loss": -0.05549988391537832,
+              "payoff_ratio": 2.04490179496639,
+              "mean_max_up": 0.15943485383685846,
+              "mean_max_down": -0.05231329834864414
+            }
+          }
+        }
+      },
+      "formal_realized_trade_metrics": {
+        "status": "UNSCORABLE_UNDER_FROZEN_V1_2_WITH_DAILY_OHLC",
+        "win_rate": null,
+        "mean_pnl_per_trade": null,
+        "avg_gain": null,
+        "avg_loss": null,
+        "payoff_ratio": null,
+        "max_drawdown": null,
+        "annual_return": null,
+        "capital_efficiency": null,
+        "official_trade_count": null
+      }
+    },
+    "S4_V2_PLUS_BOTH": {
+      "description": "v2 foundation + both filters",
+      "periods": {
+        "all": {
+          "candidate_event_count": 10,
+          "event_study_proxy": {
+            "h5": {
+              "n": 10,
+              "win_rate": 1.0,
+              "mean_return": 0.037601374911440916,
+              "median_return": 0.0294545392555386,
+              "avg_gain": 0.037601374911440916,
+              "avg_loss": null,
+              "payoff_ratio": null,
+              "mean_max_up": 0.07417919610320124,
+              "mean_max_down": -0.01684143827195365
+            },
+            "h10": {
+              "n": 10,
+              "win_rate": 1.0,
+              "mean_return": 0.07059814945280038,
+              "median_return": 0.0686338245874246,
+              "avg_gain": 0.07059814945280038,
+              "avg_loss": null,
+              "payoff_ratio": null,
+              "mean_max_up": 0.10934183457190397,
+              "mean_max_down": -0.025093414097151222
+            },
+            "h20": {
+              "n": 10,
+              "win_rate": 0.8,
+              "mean_return": 0.05545683942473913,
+              "median_return": 0.053035274491923946,
+              "avg_gain": 0.09596175363545169,
+              "avg_loss": -0.1065628174181111,
+              "payoff_ratio": 0.9005181728532481,
+              "mean_max_up": 0.1474969017618351,
+              "mean_max_down": -0.05256948653887335
+            },
+            "h40": {
+              "n": 9,
+              "win_rate": 0.6666666666666666,
+              "mean_return": 0.06358034980135478,
+              "median_return": 0.1269135614257361,
+              "avg_gain": 0.152069963324699,
+              "avg_loss": -0.1133988772453336,
+              "payoff_ratio": 1.3410182447900447,
+              "mean_max_up": 0.1859124977033077,
+              "mean_max_down": -0.06975627540571747
+            }
+          }
+        },
+        "discovery": {
+          "candidate_event_count": 1,
+          "event_study_proxy": {
+            "h5": {
+              "n": 1,
+              "win_rate": 1.0,
+              "mean_return": 0.0478709543225006,
+              "median_return": 0.0478709543225006,
+              "avg_gain": 0.0478709543225006,
+              "avg_loss": null,
+              "payoff_ratio": null,
+              "mean_max_up": 0.058168756529654,
+              "mean_max_down": -0.0192039903504237
+            },
+            "h10": {
+              "n": 1,
+              "win_rate": 1.0,
+              "mean_return": 0.0885054228845056,
+              "median_return": 0.0885054228845056,
+              "avg_gain": 0.0885054228845056,
+              "avg_loss": null,
+              "payoff_ratio": null,
+              "mean_max_up": 0.1388810950861991,
+              "mean_max_down": -0.0192039903504237
+            },
+            "h20": {
+              "n": 1,
+              "win_rate": 1.0,
+              "mean_return": 0.068188085223166,
+              "median_return": 0.068188085223166,
+              "avg_gain": 0.068188085223166,
+              "avg_loss": null,
+              "payoff_ratio": null,
+              "mean_max_up": 0.1388810950861991,
+              "mean_max_down": -0.0192039903504237
+            },
+            "h40": {
+              "n": 1,
+              "win_rate": 1.0,
+              "mean_return": 0.1269135614257361,
+              "median_return": 0.1269135614257361,
+              "avg_gain": 0.1269135614257361,
+              "avg_loss": null,
+              "payoff_ratio": null,
+              "mean_max_up": 0.1388810950861991,
+              "mean_max_down": -0.0192039903504237
+            }
+          }
+        },
+        "validation": {
+          "candidate_event_count": 5,
+          "event_study_proxy": {
+            "h5": {
+              "n": 5,
+              "win_rate": 1.0,
+              "mean_return": 0.040286385051142945,
+              "median_return": 0.0321684795186298,
+              "avg_gain": 0.040286385051142945,
+              "avg_loss": null,
+              "payoff_ratio": null,
+              "mean_max_up": 0.0929459392019637,
+              "mean_max_down": -0.004926951363050482
+            },
+            "h10": {
+              "n": 5,
+              "win_rate": 1.0,
+              "mean_return": 0.08342149000277485,
+              "median_return": 0.0835454755843554,
+              "avg_gain": 0.08342149000277485,
+              "avg_loss": null,
+              "payoff_ratio": null,
+              "mean_max_up": 0.1329215337511272,
+              "mean_max_down": -0.02143090301344562
+            },
+            "h20": {
+              "n": 5,
+              "win_rate": 0.8,
+              "mean_return": 0.08270190216805744,
+              "median_return": 0.0655706646978031,
+              "avg_gain": 0.13568793094112713,
+              "avg_loss": -0.1292422129242213,
+              "payoff_ratio": 1.0498731635049081,
+              "mean_max_up": 0.17547461191984365,
+              "mean_max_down": -0.05294846867156648
+            },
+            "h40": {
+              "n": 4,
+              "win_rate": 0.75,
+              "mean_return": 0.0909469425728509,
+              "median_return": 0.1038355262131046,
+              "avg_gain": 0.15173393160758736,
+              "avg_loss": -0.0914140245313585,
+              "payoff_ratio": 1.659853970826291,
+              "mean_max_up": 0.22518482053595607,
+              "mean_max_down": -0.0375268811105929
+            }
+          }
+        }
+      },
+      "formal_realized_trade_metrics": {
+        "status": "UNSCORABLE_UNDER_FROZEN_V1_2_WITH_DAILY_OHLC",
+        "win_rate": null,
+        "mean_pnl_per_trade": null,
+        "avg_gain": null,
+        "avg_loss": null,
+        "payoff_ratio": null,
+        "max_drawdown": null,
+        "annual_return": null,
+        "capital_efficiency": null,
+        "official_trade_count": null
+      }
+    }
+  },
+  "formal_comparison_verdict": {
+    "highest_expected_value": "UNRESOLVED",
+    "most_stable": "UNRESOLVED",
+    "lowest_risk": "UNRESOLVED",
+    "reason": "Exact realized trade paths and/or capital sizing are not deterministic under frozen v1.2 for the full sample. Ranking them numerically would require adding rules that v1.2 explicitly forbids inventing."
+  },
+  "event_study_proxy_leaders": {
+    "validation_20d_mean_return": {
+      "strategy": "S4_V2_PLUS_BOTH",
+      "mean_return": 0.08270190216805744,
+      "n": 5,
+      "warning": "Event-study proxy only; not realized v1.2 trade P/L."
+    },
+    "validation_40d_mean_return": {
+      "strategy": "S2_V2_PLUS_SMA75_SLOPE_GE_0_75PCT",
+      "mean_return": 0.09496268325130193,
+      "n": 78,
+      "warning": "Event-study proxy only; not realized v1.2 trade P/L."
+    }
+  },
+  "formal_blockers": [
+    {
+      "code": "UP_COUNT_UNRESOLVED_CAN_BLOCK_POSITION_SIZE",
+      "effect": "100-share quantity under the 10-20% / 40-50% / 30-40% allocation bands cannot be fixed when wave/up-count is not unique; portfolio capital usage and annual return are therefore not deterministic."
+    },
+    {
+      "code": "SELL_INTEGRATION_NOT_FULLY_MECHANICAL",
+      "effect": "MACD/BB/candlestick/high-retest signals are contextual and may conflict; frozen v1.2 requires SELL_DECISION=UNRESOLVED rather than inventing a universal exit, so realized holding-period P/L cannot be completed for all trades."
+    },
+    {
+      "code": "BUY_GAP_FILL_UNKNOWN",
+      "effect": "If next-day open is above a buy stop, trigger can be known but exact fill is UNKNOWN from daily OHLC; exact P/L must be excluded."
+    },
+    {
+      "code": "SELL_STOP_GAP_FILL_UNKNOWN",
+      "effect": "If open gaps below an active sell stop, trigger can be known but exact fill is UNKNOWN from daily OHLC; exact P/L must be excluded."
+    },
+    {
+      "code": "INTRADAY_SEQUENCE_UNKNOWN",
+      "effect": "If multiple relevant levels are touched in one daily bar, event order is not recoverable from daily OHLC and must remain UNKNOWN."
+    }
+  ],
+  "what_is_still_valid": "The existing 5/10/20/40-day event-study return comparisons remain valid as observational research, but they are not the actual entry-stop-exit-capital realized expectancy requested here.",
+  "next_research_path_without_changing_v1_2": [
+    "Collect forward/live v1.2 decisions with explicit AI sell decisions and actual/observable fills, then score only deterministic completed trades.",
+    "Or create a separately versioned v2 execution specification that predefines candidate persistence, wave-count/sizing, and a universal deterministic exit hierarchy before viewing its future results; do not relabel that as v1.2."
+  ],
+  "generated_at_utc": "2026-09-07T04:36:21.288302+00:00"
+}
