@@ -1,0 +1,81 @@
+{
+  "artifact": "PROFIT_TOURNAMENT_V1_PRE_REGISTRATION",
+  "freeze_date_jst": "2026-09-09",
+  "lineage": {
+    "frozen_1_unchanged": true,
+    "frozen_2_unchanged": true
+  },
+  "objective": "Compare broad daily Japanese-equity rule families under identical execution constraints; select the configuration that produces the highest holdout profit after discovery-only exit selection.",
+  "data": {
+    "execution": "Yahoo Finance/yfinance Japanese daily OHLCV using existing raw split reconstruction",
+    "universe": "current monitored TOPIX100 snapshot (99 names)",
+    "limitations": [
+      "current-constituent survivorship bias",
+      "not historical all-TSE",
+      "not J-Quants official"
+    ]
+  },
+  "periods": {
+    "fetch": "2019-01-01..2026-09-08",
+    "discovery": "2020-01-01..2022-12-30",
+    "holdout": "2023-01-01..2025-12-30"
+  },
+  "common": {
+    "capital_jpy": 300000,
+    "risk_fraction_current_equity": 0.01,
+    "lot_size": 100,
+    "max_positions": 1,
+    "min_history_rows": 260,
+    "median_turnover_20d_jpy_min": 500000000,
+    "entry": "next session open after signal close",
+    "candidate_tie": "highest 20-day median turnover",
+    "base_round_trip_cost": 0.001,
+    "stress_round_trip_cost": 0.002,
+    "initial_stop": "entry - 1.0*ATR14(signal close)",
+    "skip_if_100_share_initial_risk_exceeds_budget": true
+  },
+  "entries": {
+    "ma75_reclaim": "SMA75>SMA75[-5] AND SMA25>SMA75 AND Close<=SMA25 AND Close[-1]<=SMA75[-1] AND Close>SMA75",
+    "breakout20_vol15": "Close > prior 20-session highest High AND Volume >= 1.5*prior 20-session median Volume",
+    "breakout55": "Close > prior 55-session highest High",
+    "breakout100": "Close > prior 100-session highest High",
+    "reversal5_bottom10": "5-session return is <= cross-sectional 10th percentile among eligible stocks on signal date",
+    "reversal10_bottom10": "10-session return is <= cross-sectional 10th percentile among eligible stocks on signal date",
+    "reversal20_bottom10": "20-session return is <= cross-sectional 10th percentile among eligible stocks on signal date",
+    "momentum20_top10": "20-session return is >= cross-sectional 90th percentile among eligible stocks on signal date",
+    "momentum60_top10": "60-session return is >= cross-sectional 90th percentile among eligible stocks on signal date",
+    "near52w_high": "Close >= 0.98*prior/current 252-session highest Close AND 20-session return > 0",
+    "golden25_75": "SMA25[-1] <= SMA75[-1] AND SMA25 > SMA75",
+    "sma25_reclaim_uptrend": "SMA75>SMA75[-5] AND SMA25>SMA75 AND Close[-1]<=SMA25[-1] AND Close>SMA25"
+  },
+  "exits": {
+    "fixed_3d_1p5R": "initial stop active; target entry+1.5R; otherwise exit third holding session close; if daily bar touches stop and target same day, stop first",
+    "trail_2ATR": "no target; after each survived close next-day stop=max(previous stop, highest high since entry - 2*ATR14(current close)); never lower",
+    "trail_3ATR": "same with 3*ATR",
+    "trail_4ATR": "same with 4*ATR",
+    "sma20_break": "initial stop active; if survived close < SMA20, exit next session open",
+    "sma75_break": "initial stop active; if survived close < SMA75, exit next session open"
+  },
+  "selection": {
+    "stage1": "For each entry family, choose one exit using discovery only: highest ending equity at 0.10% round-trip cost among configs with >=10 completed trades; if none have >=10, choose highest ending equity and flag low_n.",
+    "stage2": "Evaluate only the 12 discovery-selected family champions on untouched holdout.",
+    "winner": "highest holdout ending equity at 0.10% cost. Also report 0.20% stress. Do not modify rules after holdout is seen.",
+    "full_sample_oracle": "May be reported only as descriptive overfit benchmark and may not determine winner."
+  },
+  "metrics": [
+    "trades",
+    "win_rate",
+    "total_pnl_jpy",
+    "ending_equity",
+    "expectancy_jpy",
+    "expectancy_R",
+    "profit_factor",
+    "max_drawdown",
+    "max_losing_streak",
+    "avg_gain_R",
+    "avg_loss_R",
+    "avg_win_loss_R_ratio",
+    "avg_holding_sessions",
+    "largest_winner_R"
+  ]
+}
