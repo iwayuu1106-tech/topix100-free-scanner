@@ -1,5 +1,14 @@
 {
   "position": null,
+  "pending_entry": {
+    "code": "8267",
+    "signal_date": "2026-09-09",
+    "sma25": 1375.7,
+    "sma75": 1373.5333333333333,
+    "atr14": 31.392857142857142,
+    "turnover20_median": 13460787225.0
+  },
+  "pending_exit": null,
   "completed_trades": 0,
   "paper_equity": 300000.0
 }
