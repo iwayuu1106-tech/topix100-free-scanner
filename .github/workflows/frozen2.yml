@@ -1,5 +1,6 @@
 name: FROZEN2 Backtest
 
+# Triggered after the frozen spec and runner were committed separately.
 on:
   workflow_dispatch:
   push:
