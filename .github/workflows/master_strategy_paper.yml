@@ -2,6 +2,12 @@ name: Master Strategy Paper Scan
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "master_strategy_paper_scan.py"
+      - ".github/workflows/master_strategy_paper.yml"
+      - "universe.json"
   schedule:
     # 16:10 JST = 07:10 UTC. Mon-Fri. Japanese holidays will simply reuse the latest completed bar.
     - cron: '10 7 * * 1-5'
