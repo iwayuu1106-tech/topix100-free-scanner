@@ -1,0 +1,109 @@
+{
+  "artifact": "FROZEN-2 preliminary pre-registration",
+  "version": "FROZEN-2_PRETEST_1.0",
+  "freeze_date_jst": "2026-09-09",
+  "lineage": {
+    "frozen_1_unchanged": true,
+    "note": "FROZEN-2 is a separate strategy. FROZEN-1 is not modified or deleted."
+  },
+  "objective": "75-day MA entry + small initial loss + uncapped trend-following via trailing stop",
+  "signal_period": {
+    "start": "2020-01-01",
+    "end": "2025-12-30"
+  },
+  "exit_buffer_end": "2026-09-08",
+  "development_split": {
+    "development": "2020-01-01..2022-12-30",
+    "holdout": "2023-01-01..2025-12-30"
+  },
+  "universe_target": "TSE domestic common stocks satisfying liquidity/history rules",
+  "implementation_universe_proxy": "current monitored TOPIX100 snapshot in universe.json; exact historical all-TSE universe unavailable in this session",
+  "data_source": {
+    "execution_pretest": "Yahoo Finance via yfinance, actual Japanese market OHLCV; historical raw yen/share reconstructed around stock splits",
+    "official_preferred": "J-Quants API V2",
+    "limitations": [
+      "current-constituent survivorship bias",
+      "not official J-Quants",
+      "not historical all-TSE universe"
+    ]
+  },
+  "liquidity": {
+    "min_history_rows": 120,
+    "median_turnover_20d_jpy_min": 500000000,
+    "turnover_definition": "raw Close * raw Volume; rolling 20-session median through signal close"
+  },
+  "entry": {
+    "sma75_rising": "SMA75(t) > SMA75(t-5)",
+    "sma25_above_sma75": "SMA25(t) > SMA75(t)",
+    "close_le_sma25": "Close(t) <= SMA25(t)",
+    "cross75": "Close(t-1) <= SMA75(t-1) AND Close(t) > SMA75(t)",
+    "entry_time": "next trading session open",
+    "extra_filters": "none"
+  },
+  "atr": {
+    "period": 14,
+    "method": "simple moving average of True Range; split-only normalized OHLC; ATR known as of signal close for initial stop"
+  },
+  "position_sizing": {
+    "initial_capital_jpy": 300000,
+    "risk_fraction_current_equity": 0.01,
+    "lot_size": 100,
+    "max_concurrent_positions": 1,
+    "shares": "min(risk-budget quantity, cash-affordable quantity), rounded down to 100 shares",
+    "skip_if_100_share_risk_exceeds_budget": true
+  },
+  "initial_stop": "entry open - 1.0 * ATR14(signal close), converted to entry-date share units if an overnight split occurs",
+  "profit_target": null,
+  "trailing_stop": {
+    "formula_after_each_survived_close": "max(previous_stop, highest_high_since_entry - 3.0 * ATR14(current close))",
+    "never_lower": true,
+    "active_stop_timing": "only the stop fixed by the prior close is active during the next session; today's high cannot retroactively create a same-day stop",
+    "gap_rule": "if Open <= active_stop, exit at Open",
+    "intraday_rule": "else if Low <= active_stop, exit at active_stop",
+    "entry_day_rule": "initial stop is active immediately after entry; if entry-day Low <= initial stop, exit at initial stop",
+    "max_holding_days": null
+  },
+  "candidate_selection": "if multiple signals at a close and no position is held, select highest 20-day median turnover; while holding, new signals are ignored",
+  "corporate_actions": {
+    "splits": "adjust held shares and stop/high-water prices on effective date",
+    "delisting_tob_halt": "do not fabricate fills; data-end unresolved positions remain open/marked-to-market"
+  },
+  "cost_scenarios": {
+    "base_round_trip": 0.001,
+    "stress_round_trip": 0.002,
+    "application": "half charged on entry notional, half on exit notional"
+  },
+  "regime": {
+    "proxy": "1306.T TOPIX ETF",
+    "up": "Close > SMA75 and SMA75 > SMA75 shifted 20 sessions",
+    "down": "Close < SMA75 and SMA75 < SMA75 shifted 20 sessions",
+    "range": "otherwise"
+  },
+  "required_metrics": [
+    "completed trades",
+    "win rate",
+    "average gain/loss JPY",
+    "average gain/loss R",
+    "expectancy JPY",
+    "expectancy R",
+    "profit factor",
+    "max drawdown",
+    "max losing streak",
+    "average/median/max holding sessions",
+    "largest winner JPY/R",
+    "largest loser JPY/R",
+    "top1/top5/top10 share of gross profits",
+    "year-by-year",
+    "regime-by-regime",
+    "30万 equity curve",
+    "top1/top3/top5 winner-removal robustness"
+  ],
+  "verdict_rules": {
+    "numeric_adopt": "n>=50; expectancy_R>0.20; PF>=1.30; avg_win_R/abs(avg_loss_R)>=2.0; maxDD<=15%; stress expectancy_R>0; both development and holdout expectancy_R>0",
+    "numeric_conditional": "n>=30; expectancy_R>0; PF>1.10; avg_win_R/abs(avg_loss_R)>1.5; maxDD<=20%; stress expectancy_R>=0, but one robustness/subperiod criterion may fail",
+    "hold": "main result positive but n<30 or stress/subperiod evidence is too weak",
+    "reject": "expectancy_R<=0 or PF<=1.0, or materially negative stress result, or maxDD>25%",
+    "evidence_quality_cap": "because this execution pretest uses current TOPIX100 proxy + yfinance instead of historical all-TSE J-Quants, final verdict cannot exceed 条件付き採用"
+  },
+  "anti_optimization": "No parameter, threshold, entry condition, ATR multiplier, or exit rule may be changed after results are observed."
+}
