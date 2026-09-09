@@ -1,0 +1,29 @@
+{
+  "generated_at_utc": "2026-09-09T11:25:05.742097+00:00",
+  "mode": "PROVISIONAL_PAPER_ONLY",
+  "source": "Yahoo Finance/yfinance",
+  "strategy": "25/75 golden cross + initial 1ATR risk + exit next open after close < SMA20",
+  "paper_equity": 300000.0,
+  "position": null,
+  "action": "ENTER_NEXT_OPEN_IF_AFFORDABLE",
+  "candidates": [
+    {
+      "code": "8267",
+      "signal_date": "2026-09-09",
+      "sma25": 1375.7,
+      "sma75": 1373.5333333333333,
+      "atr14": 31.392857142857142,
+      "turnover20_median": 13460787225.0
+    }
+  ],
+  "selected": {
+    "code": "8267",
+    "signal_date": "2026-09-09",
+    "sma25": 1375.7,
+    "sma75": 1373.5333333333333,
+    "atr14": 31.392857142857142,
+    "turnover20_median": 13460787225.0
+  },
+  "risk_budget_jpy": 3000.0,
+  "sizing_rule": "At next open: stop = open - ATR14(signal close); choose max 100-share lots affordable and with initial stop risk <= 1% equity; skip if even 100 shares exceed risk/cash."
+}
