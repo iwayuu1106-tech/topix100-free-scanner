@@ -1,0 +1,36 @@
+name: Profit Tournament V1
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "profit_tournament_spec_v1.json"
+      - "backtest_profit_tournament_v1.py"
+      - ".github/workflows/profit_tournament_v1.yml"
+      - "universe.json"
+      - "requirements.txt"
+      - "backtest_frozen2.py"
+
+permissions:
+  contents: write
+
+jobs:
+  tournament:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python backtest_profit_tournament_v1.py
+      - name: Commit tournament outputs
+        run: |
+          git config user.name "topix100-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add research/profit_tournament_v1/
+          git diff --cached --quiet || git commit -m "Add Profit Tournament V1 results"
+          git push
