@@ -1,13 +1,6 @@
 {
   "position": null,
-  "pending_entry": {
-    "code": "8002",
-    "signal_date": "2026-09-10",
-    "sma25": 4987.84,
-    "sma75": 4986.026666666667,
-    "atr14": 130.07142857142858,
-    "turnover20_median": 18227471000.0
-  },
+  "pending_entry": null,
   "pending_exit": null,
   "completed_trades": 0,
   "paper_equity": 300000.0
