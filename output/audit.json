@@ -1,6 +1,6 @@
 {
   "status": "PASS_DATA_LAYER",
-  "asof": "2026-09-10",
+  "asof": "2026-09-11",
   "checks": {
     "01_same_free_source_all_names": true,
     "02_all_names_have_120_rows": true,
