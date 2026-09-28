@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-09-25T07:22:06.607570+00:00",
-  "as_of": "2026-09-25",
+  "generated_at_utc": "2026-09-28T07:24:03.851812+00:00",
+  "as_of": "2026-09-28",
   "mode": "PROVISIONAL_PAPER_ONLY",
   "source": "Yahoo Finance/yfinance",
   "strategy": "25/75 golden cross + initial 1ATR stop + exit next open after close < SMA20",
