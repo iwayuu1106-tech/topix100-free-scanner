@@ -1,13 +1,6 @@
 {
   "position": null,
-  "pending_entry": {
-    "code": "9984",
-    "signal_date": "2026-10-02",
-    "sma25": 5980.76,
-    "sma75": 5931.92,
-    "atr14": 418.2857142857143,
-    "turnover20_median": 418221210300.0
-  },
+  "pending_entry": null,
   "pending_exit": null,
   "completed_trades": 0,
   "paper_equity": 300000.0
