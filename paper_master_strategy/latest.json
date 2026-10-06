@@ -1,14 +1,12 @@
 {
-  "generated_at_utc": "2026-10-05T07:25:56.821988+00:00",
-  "as_of": "2026-10-05",
+  "generated_at_utc": "2026-10-06T07:24:35.938130+00:00",
+  "as_of": "2026-10-06",
   "mode": "PROVISIONAL_PAPER_ONLY",
   "source": "Yahoo Finance/yfinance",
   "strategy": "25/75 golden cross + initial 1ATR stop + exit next open after close < SMA20",
   "paper_equity": 300000.0,
   "completed_trades": 0,
-  "action": "PAPER_ENTRY_SKIPPED",
-  "code": "9984",
-  "open": 6476.0,
-  "reason": "100 shares exceed risk budget or available paper capital",
-  "candidates": []
+  "action": "NO_SIGNAL",
+  "candidates": [],
+  "reason": "No fresh eligible 25/75 golden cross"
 }
