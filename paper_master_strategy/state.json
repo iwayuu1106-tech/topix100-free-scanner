@@ -1,6 +1,13 @@
 {
   "position": null,
-  "pending_entry": null,
+  "pending_entry": {
+    "code": "6920",
+    "signal_date": "2026-10-16",
+    "sma25": 40924.0,
+    "sma75": 40724.933333333334,
+    "atr14": 2897.8571428571427,
+    "turnover20_median": 190956695000.0
+  },
   "pending_exit": null,
   "completed_trades": 0,
   "paper_equity": 300000.0
