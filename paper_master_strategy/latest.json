@@ -1,12 +1,30 @@
 {
-  "generated_at_utc": "2026-10-21T12:52:58.460305+00:00",
-  "as_of": "2026-10-21",
+  "generated_at_utc": "2026-10-22T12:55:23.333444+00:00",
+  "as_of": "2026-10-22",
   "mode": "PROVISIONAL_PAPER_ONLY",
   "source": "Yahoo Finance/yfinance",
   "strategy": "25/75 golden cross + initial 1ATR stop + exit next open after close < SMA20",
   "paper_equity": 300000.0,
   "completed_trades": 0,
-  "action": "NO_SIGNAL",
-  "candidates": [],
-  "reason": "No fresh eligible 25/75 golden cross"
+  "action": "ENTER_NEXT_OPEN_IF_AFFORDABLE",
+  "candidates": [
+    {
+      "code": "6861",
+      "signal_date": "2026-10-22",
+      "sma25": 79425.6,
+      "sma75": 79337.46666666666,
+      "atr14": 1904.2857142857142,
+      "turnover20_median": 40594683000.0
+    }
+  ],
+  "selected": {
+    "code": "6861",
+    "signal_date": "2026-10-22",
+    "sma25": 79425.6,
+    "sma75": 79337.46666666666,
+    "atr14": 1904.2857142857142,
+    "turnover20_median": 40594683000.0
+  },
+  "risk_budget_jpy": 3000.0,
+  "sizing_rule": "Tomorrow open: stop=open-ATR14(signal close); size in 100-share lots so initial risk <=1% equity and notional <= equity."
 }
