@@ -1,29 +1,32 @@
 {
-  "generated_at_utc": "2026-10-22T12:55:23.333444+00:00",
-  "as_of": "2026-10-22",
+  "generated_at_utc": "2026-10-23T12:34:47.154412+00:00",
+  "as_of": "2026-10-23",
   "mode": "PROVISIONAL_PAPER_ONLY",
   "source": "Yahoo Finance/yfinance",
   "strategy": "25/75 golden cross + initial 1ATR stop + exit next open after close < SMA20",
   "paper_equity": 300000.0,
   "completed_trades": 0,
   "action": "ENTER_NEXT_OPEN_IF_AFFORDABLE",
+  "code": "6861",
+  "open": 77510.0,
+  "reason": "100 shares exceed risk budget or available paper capital",
   "candidates": [
     {
-      "code": "6861",
-      "signal_date": "2026-10-22",
-      "sma25": 79425.6,
-      "sma75": 79337.46666666666,
-      "atr14": 1904.2857142857142,
-      "turnover20_median": 40594683000.0
+      "code": "6971",
+      "signal_date": "2026-10-23",
+      "sma25": 3671.24,
+      "sma75": 3668.28,
+      "atr14": 117.92857142857143,
+      "turnover20_median": 16885213800.0
     }
   ],
   "selected": {
-    "code": "6861",
-    "signal_date": "2026-10-22",
-    "sma25": 79425.6,
-    "sma75": 79337.46666666666,
-    "atr14": 1904.2857142857142,
-    "turnover20_median": 40594683000.0
+    "code": "6971",
+    "signal_date": "2026-10-23",
+    "sma25": 3671.24,
+    "sma75": 3668.28,
+    "atr14": 117.92857142857143,
+    "turnover20_median": 16885213800.0
   },
   "risk_budget_jpy": 3000.0,
   "sizing_rule": "Tomorrow open: stop=open-ATR14(signal close); size in 100-share lots so initial risk <=1% equity and notional <= equity."
