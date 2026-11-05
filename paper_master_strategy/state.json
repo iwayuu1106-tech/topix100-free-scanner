@@ -1,6 +1,13 @@
 {
   "position": null,
-  "pending_entry": null,
+  "pending_entry": {
+    "code": "9983",
+    "signal_date": "2026-11-04",
+    "sma25": 74218.8,
+    "sma75": 73997.33333333333,
+    "atr14": 1920.0,
+    "turnover20_median": 77847909500.0
+  },
   "pending_exit": null,
   "completed_trades": 0,
   "paper_equity": 300000.0
