@@ -1,12 +1,12 @@
 {
   "position": null,
   "pending_entry": {
-    "code": "8031",
-    "signal_date": "2026-11-16",
-    "sma25": 4971.68,
-    "sma75": 4966.546666666667,
-    "atr14": 174.92857142857142,
-    "turnover20_median": 25313474900.0
+    "code": "8002",
+    "signal_date": "2026-11-17",
+    "sma25": 4977.04,
+    "sma75": 4967.44,
+    "atr14": 206.42857142857142,
+    "turnover20_median": 18910390300.0
   },
   "pending_exit": null,
   "completed_trades": 0,

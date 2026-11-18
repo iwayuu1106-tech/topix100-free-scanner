@@ -1,48 +1,32 @@
 {
-  "generated_at_utc": "2026-11-17T16:50:21.118690+00:00",
-  "as_of": "2026-11-16",
+  "generated_at_utc": "2026-11-18T16:23:14.544919+00:00",
+  "as_of": "2026-11-17",
   "mode": "PROVISIONAL_PAPER_ONLY",
   "source": "Yahoo Finance/yfinance",
   "strategy": "25/75 golden cross + initial 1ATR stop + exit next open after close < SMA20",
   "paper_equity": 300000.0,
   "completed_trades": 0,
   "action": "ENTER_NEXT_OPEN_IF_AFFORDABLE",
-  "code": "2503",
-  "open": 3122.0,
+  "code": "8031",
+  "open": 5050.0,
   "reason": "100 shares exceed risk budget or available paper capital",
   "candidates": [
     {
-      "code": "8031",
-      "signal_date": "2026-11-16",
-      "sma25": 4971.68,
-      "sma75": 4966.546666666667,
-      "atr14": 174.92857142857142,
-      "turnover20_median": 25313474900.0
-    },
-    {
-      "code": "4519",
-      "signal_date": "2026-11-16",
-      "sma25": 6725.72,
-      "sma75": 6705.933333333333,
-      "atr14": 244.57142857142858,
-      "turnover20_median": 21795238600.0
-    },
-    {
-      "code": "9202",
-      "signal_date": "2026-11-16",
-      "sma25": 3045.92,
-      "sma75": 3037.06,
-      "atr14": 78.42857142857143,
-      "turnover20_median": 9802267750.0
+      "code": "8002",
+      "signal_date": "2026-11-17",
+      "sma25": 4977.04,
+      "sma75": 4967.44,
+      "atr14": 206.42857142857142,
+      "turnover20_median": 18910390300.0
     }
   ],
   "selected": {
-    "code": "8031",
-    "signal_date": "2026-11-16",
-    "sma25": 4971.68,
-    "sma75": 4966.546666666667,
-    "atr14": 174.92857142857142,
-    "turnover20_median": 25313474900.0
+    "code": "8002",
+    "signal_date": "2026-11-17",
+    "sma25": 4977.04,
+    "sma75": 4967.44,
+    "atr14": 206.42857142857142,
+    "turnover20_median": 18910390300.0
   },
   "risk_budget_jpy": 3000.0,
   "sizing_rule": "Tomorrow open: stop=open-ATR14(signal close); size in 100-share lots so initial risk <=1% equity and notional <= equity."
