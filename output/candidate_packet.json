@@ -1,7 +1,7 @@
 {
   "status": "DATA_LAYER_PASS",
   "source": "Yahoo Finance via yfinance, same bulk method for every monitored stock",
-  "asof": "2026-11-17",
+  "asof": "2026-11-18",
   "universe_count": 99,
   "candidate_count": 0,
   "candidates": [],
