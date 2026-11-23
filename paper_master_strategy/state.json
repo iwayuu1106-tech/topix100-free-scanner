@@ -1,6 +1,13 @@
 {
   "position": null,
-  "pending_entry": null,
+  "pending_entry": {
+    "code": "5401",
+    "signal_date": "2026-11-20",
+    "sma25": 671.27599609375,
+    "sma75": 671.2706665039062,
+    "atr14": 14.335715157645089,
+    "turnover20_median": 20613145683.166504
+  },
   "pending_exit": null,
   "completed_trades": 0,
   "paper_equity": 300000.0
