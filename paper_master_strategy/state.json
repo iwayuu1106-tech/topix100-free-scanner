@@ -1,17 +1,7 @@
 {
-  "position": {
-    "code": "5401",
-    "signal_date": "2026-11-20",
-    "entry_date": "2026-11-24",
-    "entry_price": 674.9000244140625,
-    "shares": 200,
-    "initial_stop": 660.5643092564175,
-    "initial_risk_jpy": 2867.1430315290177
-  },
+  "position": null,
   "pending_entry": null,
-  "pending_exit": {
-    "signal_date": "2026-11-24"
-  },
-  "completed_trades": 0,
-  "paper_equity": 300000.0
+  "pending_exit": null,
+  "completed_trades": 1,
+  "paper_equity": 298685.6051147461
 }

@@ -1,0 +1,2 @@
+﻿code,signal_date,entry_date,exit_date,entry_price,exit_price,shares,initial_stop,initial_risk_jpy,pnl_jpy,R_multiple,exit_reason,paper_equity_after
+5401,2026-11-20,2026-11-24,2026-11-25,674.9000244140625,669.0,200,660.5643092564175,2867.1430315290177,-1314.3948852539063,-0.4584336640341773,SMA20_BREAK_NEXT_OPEN,298685.6051147461
