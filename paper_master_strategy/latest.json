@@ -1,15 +1,12 @@
 {
-  "generated_at_utc": "2026-11-26T17:40:31.740634+00:00",
-  "as_of": "2026-11-25",
+  "generated_at_utc": "2026-11-27T17:24:44.033732+00:00",
+  "as_of": "2026-11-26",
   "mode": "PROVISIONAL_PAPER_ONLY",
   "source": "Yahoo Finance/yfinance",
   "strategy": "25/75 golden cross + initial 1ATR stop + exit next open after close < SMA20",
   "paper_equity": 298685.6051147461,
   "completed_trades": 1,
-  "action": "PAPER_EXITED",
-  "code": "5401",
-  "exit_price": 669.0,
-  "pnl_jpy": -1314.3948852539063,
-  "R_multiple": -0.4584336640341773,
-  "candidates": []
+  "action": "NO_SIGNAL",
+  "candidates": [],
+  "reason": "No fresh eligible 25/75 golden cross"
 }
